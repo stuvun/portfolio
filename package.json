@@ -12,6 +12,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "portfolio": "portfolio -c .portfolio",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
