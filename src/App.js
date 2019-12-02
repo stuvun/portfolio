@@ -1,23 +1,26 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
-import Home from "./components/Home";
+import Projects from "./components/Projects";
+import Resume from "./components/Resume";
 
-function App() {
-  return (
-    <Router>
-      <nav className="navbar navbar-expand-lg navbar-light">
-        <nav className="nav-link navbar-brand">My Portfolio</nav>
-
-        <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-          <Link to="/" className="nav-item nav-link">Home</Link>
-          <Link to="/about" className="nav-item nav-link">About</Link>
-          <Link to="/projects" className="nav-item nav-link">Projects</Link>
-        </ul>
-      </nav>
-      <Route path="/" exact component={Home}></Route>
-    </Router>
-  );
+class App extends Component {
+  render() {
+    return (
+        <Router>
+            <nav className="navbar navbar-expand-sm bg-white">
+                <Link to="/" className="nav-link navbar-brand link">Portfolio</Link>
+                <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <Link to="/projects" className="nav-item nav-link link">Projects</Link>
+                    <Link to="/resume" className="nav-item nav-link link">Resume</Link>
+                </ul>
+            </nav>
+            {/* <Route path="/" exact component={Home}></Route> */}
+            <Route path="/projects" exact component={Projects}></Route>
+            <Route path="/resume" exact component={Resume}></Route>
+        </Router>
+    )
+  }
 }
 
 export default App;

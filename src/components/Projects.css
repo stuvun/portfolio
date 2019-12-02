@@ -1,0 +1,13 @@
+.projectContainer, .calendarContainer, .giphyContainer, .simonContainer, .mockContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendarContainer, .giphyContainer, .simonContainer, .mockContainer {
+    margin: 2vw auto;
+}
+
+.calendar {
+    width: 50%;
+}
