@@ -7,6 +7,7 @@ class Home extends Component {
         return (
             <div className="homeContainer">
                 <img src={headshot} className="headshot"/>
+                <h1>Hello!</h1>
             </div>
         )
     }
