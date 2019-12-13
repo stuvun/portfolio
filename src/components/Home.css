@@ -8,3 +8,8 @@
   width: 300px;
   border-radius: 50%;
 }
+.title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}

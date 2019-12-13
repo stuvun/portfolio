@@ -6,28 +6,20 @@ import Simon from "../images/simonExample.gif";
 import Mock from "../images/mockExample.gif";
 
 class Projects extends Component {
-    render() {
-        return (
-            <div className="projectContainer">
-                <div className="calendarContainer">
-                    <h3>Calendar App</h3>
-                    <img className="calendar" src={Calendar} alt="Calendar"/>
-                </div>
-                <div className="giphyContainer">
-                    <h3>Giphy Slider UI</h3>
-                    <img className="giphy" src={Giphy} alt="Giphy"/>
-                </div>
-                <div className="simonContainer">
-                    <h3>Simon Game</h3>
-                    <img className="simon" src={Simon} alt="Simon"/>
-                </div>
-                <div className="mockContainer">
-                    <h3>Mock Site</h3>
-                    <img className="mock" src={Mock} alt="Mock"/>
-                </div>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div className="projects-wrapper">
+        <div className="arrow-left" />
+        <div className="projects-container">
+          <img className="calendar container" src={Calendar} alt="Calendar" />
+          <img className="giphy container" src={Giphy} alt="Giphy" />
+          <img className="simon container" src={Simon} alt="Simon" />
+          <img className="mock container" src={Mock} alt="Mock" />
+        </div>
+        <div className="arrow-right" />
+      </div>
+    );
+  }
 }
 
 export default Projects;
