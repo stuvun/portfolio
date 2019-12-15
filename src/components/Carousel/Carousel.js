@@ -14,35 +14,43 @@ class Carousel extends React.Component {
 
     this.state = {
       images: [Calendar, Giphy, Mock, Simon],
-      currentIndex: 0,
-      translateValue: 0
+      slideIndex: 0,
+      slideTranslation: 0
     };
   }
 
   goToPrevSlide = () => {
-    if (this.state.currentIndex === 0) return;
-
-    this.setState(prevState => ({
-      currentIndex: prevState.currentIndex - 1,
-      translateValue: prevState.translateValue + this.slideWidth()
-    }));
+    if (this.state.slideIndex === 0) {
+      this.setState(prevState => ({
+        slideIndex: prevState.slideIndex + (this.state.images.length - 1),
+        slideTranslation: prevState.slideTranslation - this.slideWidth() * 3
+      }));
+      console.log(this.state.images.length);
+      console.log(this.state.slideIndex - 1);
+    } else {
+      this.setState(prevState => ({
+        slideIndex: prevState.slideIndex - 1,
+        slideTranslation: prevState.slideTranslation + this.slideWidth()
+      }));
+      console.log(this.state.slideIndex - 1);
+    }
   };
 
   goToNextSlide = () => {
     // Exiting the method early if we are at the end of the images array.
-    // We also want to reset currentIndex and translateValue, so we return
+    // We also want to reset slideIndex and slideTranslation, so we return
     // to the first image in the array.
-    if (this.state.currentIndex === this.state.images.length - 1) {
+    if (this.state.slideIndex === this.state.images.length - 1) {
       return this.setState({
-        currentIndex: 0,
-        translateValue: 0
+        slideIndex: 0,
+        slideTranslation: 0
       });
     }
 
     // This will not run if we met the if condition above
     this.setState(prevState => ({
-      currentIndex: prevState.currentIndex + 1,
-      translateValue: prevState.translateValue + -this.slideWidth()
+      slideIndex: prevState.slideIndex + 1,
+      slideTranslation: prevState.slideTranslation + -this.slideWidth()
     }));
   };
 
@@ -56,7 +64,7 @@ class Carousel extends React.Component {
         <div
           className="slider-wrapper"
           style={{
-            transform: `translateX(${this.state.translateValue}px)`,
+            transform: `translateX(${this.state.slideTranslation}px)`,
             transition: "transform ease-out 0.45s"
           }}
         >
