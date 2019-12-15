@@ -1,3 +1,8 @@
+.carousel-container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+}
 .carousel {
   position: relative;
   width: 60vw;
@@ -17,62 +22,68 @@
   width: 100%;
 }
 .arrow {
-  height: 50px;
-  width: 50px;
+  height: 6vw;
+  width: 6vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: grey;
+  background: rgb(240, 240, 240);
   border-radius: 50%;
   cursor: pointer;
-  transition: transform ease-in 0.1s;
+  transition: transform ease-in 0.3s;
   text-align: center;
 }
-.next-arrow {
-  position: absolute;
-  top: 50%;
-  right: 25px;
-  z-index: 999;
-  color: black;
+.arrow:hover {
+  background: rgb(230, 230, 230);
 }
 .back-arrow {
   position: absolute;
   top: 50%;
-  left: 25px;
-  z-index: 999;
+  left: 5%;
   color: black;
+  z-index: 10;
 }
-.arrow span {
-  display: inline-block;
-  transition: 0.3s ease;
-}
-.arrow .back:before {
-  content: "\21e0";
+.next-arrow {
   position: absolute;
-  opacity: 0;
-  top: 0;
-  left: -2vw;
-  transition: 0.3s ease;
+  top: 50%;
+  right: 5%;
+  color: black;
+  z-index: 10;
 }
-.arrow .next:after {
-  content: "\21e2";
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -2vw;
+.back,
+.next,
+.back-hover,
+.next-hover {
+  position: fixed;
   transition: 0.3s ease;
+  font-size: 2rem;
+  user-select: none;
+}
+.back-hover,
+.next-hover {
+  opacity: 0;
 }
 .arrow:hover .back {
   padding-left: 2vw;
+  opacity: 0.3;
 }
 .arrow:hover .next {
   padding-right: 2vw;
+  opacity: 0.3;
 }
-.arrow:hover .back:before {
+.arrow:hover .back-hover {
+  padding-right: 2vw;
+  opacity: 1;
+}
+.arrow:hover .next-hover {
+  padding-left: 2vw;
+  opacity: 1;
+}
+/* .arrow:hover .back-hover:before {
   opacity: 1;
   left: 0;
 }
-.arrow:hover .next:after {
+.arrow:hover .next-hover:after {
   opacity: 1;
-  right: 0;
-}
+  right: 2vw;
+} */

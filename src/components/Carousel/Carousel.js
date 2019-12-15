@@ -52,21 +52,21 @@ class Carousel extends React.Component {
 
   render() {
     return (
-      <div className="carousel">
-        <div
-          className="carousel-wrapper"
-          style={{
-            transform: `translateX(${this.state.translate}px)`,
-            transition: "transform ease-out 0.4s"
-          }}
-        >
-          {this.state.images.map((image, i) => (
-            <Slide key={i} image={image} />
-          ))}
-        </div>
-
+      <div className="carousel-container">
         <BackArrow previous={this.previous} />
-
+        <div className="carousel">
+          <div
+            className="carousel-wrapper"
+            style={{
+              transform: `translateX(${this.state.translate}px)`,
+              transition: "transform ease-out 0.4s"
+            }}
+          >
+            {this.state.images.map((image, i) => (
+              <Slide key={i} image={image} />
+            ))}
+          </div>
+        </div>
         <NextArrow next={this.next} />
       </div>
     );
