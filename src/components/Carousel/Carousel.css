@@ -9,9 +9,7 @@
   white-space: nowrap;
 }
 .carousel-wrapper {
-  position: relative;
   height: 100%;
-  width: 100%;
 }
 .slide {
   display: inline-block;
@@ -19,8 +17,8 @@
   width: 100%;
 }
 .arrow {
-  height: 6vw;
-  width: 6vw;
+  height: 80px;
+  width: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,14 +31,14 @@
   background: rgb(230, 230, 230);
 }
 .back-arrow {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 5%;
   color: black;
   z-index: 10;
 }
 .next-arrow {
-  position: absolute;
+  position: fixed;
   top: 50%;
   right: 5%;
   color: black;

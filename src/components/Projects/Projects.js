@@ -4,8 +4,8 @@ import "./Projects.css";
 
 const Projects = () => {
   return (
-    <div className="home-container">
-      <Carousel></Carousel>
+    <div className="projects-container">
+      <Carousel />
     </div>
   );
 };
