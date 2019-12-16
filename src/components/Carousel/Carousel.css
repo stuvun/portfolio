@@ -4,10 +4,10 @@
   width: 100%;
 }
 .carousel {
-  width: 60vw;
-  height: 50vw;
+  width: 800px;
+  height: 700px;
   margin: 0 auto;
-  overflow-x: hidden;
+  overflow: hidden;
   white-space: nowrap;
 }
 .carousel-wrapper {

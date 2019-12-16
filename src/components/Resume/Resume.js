@@ -9,11 +9,11 @@ class Resume extends Component {
     return (
       <div className="resume-container">
         <a className="pdf-link" href={resumeLink}>
-          <img src={PDF} rel="pdf" className="pdf" />
+          <img src={PDF} rel="pdf" className="pdf" alt="pdf" />
           <span className="view">View PDF</span>
         </a>
         <div className="image-container">
-          <img src={resume} className="resume" />
+          <img src={resume} className="resume" alt="resume" />
         </div>
       </div>
     );
