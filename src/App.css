@@ -8,7 +8,6 @@ body {
   align-items: center;
   height: 75px;
   padding-bottom: 5px;
-  /* background-color: rgb(210, 210, 210); */
 }
 .portfolio-tab {
   text-align: center;
@@ -20,7 +19,7 @@ body {
   background-color: rgb(35, 55, 165);
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
-  box-shadow: 1px 1px 2px rgb(20, 20, 60), 2px 2px 4px rgb(20, 20, 60);
+  box-shadow: 1px 1px 2px rgb(20, 20, 60), 2px 2px 3px rgb(20, 20, 60);
 }
 .portfolio-tab .link {
   position: relative;
@@ -87,11 +86,22 @@ body {
 .resume-tab:active .link {
   color: black;
 }
-.link {
+.projects-tab .link,
+.resume-tab .link {
+  position: relative;
+  top: 20%;
+  text-decoration: none;
+  user-select: none;
+  padding: 20px 25% 20px 22%;
+}
+.resume-tab .link {
+  color: rgba(240, 240, 240);
+}
+.portfolio-tab .link {
   position: relative;
   top: 20%;
   color: rgba(240, 240, 240);
   text-decoration: none;
   user-select: none;
-  padding: 20px 25% 20px 22%;
+  padding: 20px 25% 20px 12%;
 }

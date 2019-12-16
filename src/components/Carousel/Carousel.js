@@ -12,7 +12,7 @@ class Carousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      images: [Calendar, Giphy, Mock, Simon],
+      images: [Calendar, Giphy, Simon, Mock],
       index: 0,
       translate: 0
     };

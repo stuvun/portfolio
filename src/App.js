@@ -12,7 +12,7 @@ class App extends Component {
         <nav className="navbar">
           <div className="portfolio-tab">
             <Link to="/" className="home-link link">
-              Portfolio
+              Developer
             </Link>
           </div>
           <div className="projects-tab">
