@@ -1,0 +1,23 @@
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin-top: 2%;
+}
+.pdf-link {
+  text-decoration: none;
+  user-select: contain;
+}
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2vw auto 5vw auto;
+}
+.resume {
+  width: 80vw;
+  box-shadow: 0.3vw 0.2vw 0.3vw rgba(180, 180, 180, 0.5),
+    0.3vw 0.4vw 0.3vw rgba(210, 210, 210, 0.5),
+    0.3vw 0.6vw 0.3vw rgba(210, 210, 210, 0.5);
+}
