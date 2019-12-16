@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(210, 210, 220);
 }
 .navbar {
   display: flex;
@@ -9,19 +9,16 @@ body {
   height: 75px;
   padding-bottom: 5px;
 }
-.portfolio-tab {
-  text-align: center;
-  z-index: 10;
-  width: 150px;
+.dev-tab {
+  text-align: left;
+  width: 130px;
   height: 50px;
   font-size: 1.5rem;
   margin-left: -4px;
   background-color: rgb(35, 55, 165);
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  box-shadow: 1px 1px 2px rgb(20, 20, 60), 2px 2px 3px rgb(20, 20, 60);
+  box-shadow: 1px 1px rgb(20, 20, 60), 2px 2px rgb(20, 20, 60);
 }
-.portfolio-tab .link {
+.dev-tab .link {
   position: relative;
   top: 20%;
   color: white;
@@ -29,33 +26,34 @@ body {
   text-shadow: -0.05vw -0.05vw 0 rgba(50, 50, 50, 0.9),
     -0.075vw -0.075vw 0 rgba(50, 50, 50, 0.9);
 }
-.portfolio-tab:hover {
+.dev-tab-container:hover .dev-tab {
   background-color: rgb(15, 35, 130);
 }
-.portfolio-tab:active {
-  margin: 2px -4px -2px 0px;
+.dev-tab-container:hover .dev-right-point {
+  border-left: 25px solid rgb(15, 35, 130);
+}
+.dev-tab-container:active {
+  margin: 2px -1px -2px 1px;
+}
+.dev-tab-container:active .dev-tab {
   box-shadow: none;
 }
-.portfolio-tab:active .link {
+.dev-tab-container:active .link {
   text-shadow: none;
 }
 .projects-tab {
-  text-align: center;
-  margin-top: 10px;
-  margin-left: -18px;
-  z-index: 5;
-  width: 110px;
+  margin-top: 14px;
+  margin-left: -25px;
+  width: 90px;
   height: 40px;
   background-color: white;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
   transition: 0.3s ease;
 }
 .projects-tab .link {
   color: black;
 }
 .projects-tab:hover {
-  width: 150px;
+  width: 130px;
 }
 .projects-tab:active {
   background-color: rgb(75, 75, 75);
@@ -66,18 +64,15 @@ body {
 }
 .resume-tab {
   text-align: center;
-  margin-top: 10px;
-  margin-left: -18px;
-  z-index: 3;
-  width: 110px;
+  margin-top: 14px;
+  margin-left: -25px;
+  width: 90px;
   height: 40px;
   background-color: rgb(75, 75, 75);
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
   transition: 0.3s ease;
 }
 .resume-tab:hover {
-  width: 150px;
+  width: 130px;
 }
 .resume-tab:active {
   background-color: white;
@@ -86,22 +81,74 @@ body {
 .resume-tab:active .link {
   color: black;
 }
-.projects-tab .link,
-.resume-tab .link {
-  position: relative;
-  top: 23%;
-  text-decoration: none;
-  user-select: none;
-  padding: 20px 25% 20px 22%;
-}
-.resume-tab .link {
-  color: rgba(240, 240, 240);
-}
-.portfolio-tab .link {
+.dev-tab .link {
   position: relative;
   top: 20%;
   color: rgba(240, 240, 240);
   text-decoration: none;
   user-select: none;
   padding: 20px 25% 20px 12%;
+}
+.projects-tab .link,
+.resume-tab .link {
+  position: relative;
+  top: 25%;
+  text-decoration: none;
+  user-select: none;
+  padding: 20px 25% 20px 34%;
+}
+.resume-tab .link {
+  color: rgba(240, 240, 240);
+}
+.tab-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+.dev-tab-container {
+  z-index: 10;
+}
+.projects-tab-container {
+  z-index: 8;
+}
+.resume-tab-container {
+  z-index: 6;
+}
+.dev-right-point {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid rgb(35, 55, 165);
+}
+.right-point {
+  position: relative;
+  left: -0.5%;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+.projects-tab-container .right-point {
+  border-left: 20px solid white;
+  transition: 0.3s ease;
+}
+.resume-tab-container .right-point {
+  border-left: 20px solid rgb(75, 75, 75);
+  transition: 0.3s ease;
+}
+.projects-tab-container:active .projects-tab {
+  background-color: rgb(75, 75, 75);
+}
+.projects-tab-container:active .right-point {
+  border-left: 25px solid rgb(75, 75, 75);
+  transition: 0.1s ease;
+}
+.resume-tab-container:active .resume-tab {
+  background-color: white;
+}
+.resume-tab-container:active .right-point {
+  border-left: 25px solid white;
+  transition: 0.1s ease;
 }

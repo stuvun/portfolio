@@ -10,20 +10,29 @@ class App extends Component {
     return (
       <Router>
         <nav className="navbar">
-          <div className="portfolio-tab">
-            <Link to="/" className="home-link link">
-              Developer
-            </Link>
+          <div className="dev-tab-container tab-container">
+            <div className="dev-tab">
+              <Link to="/" className="dev-link link">
+                Developer
+              </Link>
+            </div>
+            <div className="dev-right-point" />
           </div>
-          <div className="projects-tab">
-            <Link to="/projects" className="projects-link link">
-              Projects
-            </Link>
+          <div className="projects-tab-container tab-container">
+            <div className="projects-tab">
+              <Link to="/projects" className="projects-link link">
+                Projects
+              </Link>
+            </div>
+            <div className="right-point" />
           </div>
-          <div className="resume-tab">
-            <Link to="/resume" className="resume-link link">
-              Resume
-            </Link>
+          <div className="resume-tab-container tab-container">
+            <div className="resume-tab">
+              <Link to="/resume" className="resume-link link">
+                Resume
+              </Link>
+            </div>
+            <div className="right-point" />
           </div>
         </nav>
         <Route path="/" exact component={Home}></Route>
