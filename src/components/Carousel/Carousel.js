@@ -13,6 +13,7 @@ class Carousel extends React.Component {
     super(props);
     this.state = {
       images: [Calendar, Giphy, Simon, Mock],
+      labels: ["Calendar App", "Giphy Slider UI", "Simon Game", "Mock Site"],
       index: 0,
       translate: 0
     };
@@ -63,7 +64,7 @@ class Carousel extends React.Component {
             }}
           >
             {this.state.images.map((image, i) => (
-              <Slide key={i} image={image} />
+              <Slide key={i} image={image} label={this.state.labels[i]} />
             ))}
           </div>
         </div>
