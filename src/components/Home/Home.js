@@ -1,11 +1,11 @@
 import React from "react";
-import Carousel from "../Carousel/Carousel";
+import Profile from "../../images/headshot.jpg";
 import "./Home.css";
 
 const Home = () => {
   return (
     <div className="home-container">
-      <Carousel></Carousel>
+      <img src={Profile} alt="profile" className="profile" />
     </div>
   );
 };

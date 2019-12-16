@@ -1,7 +1,6 @@
 .carousel-container {
   position: absolute;
   width: 100%;
-  display: flex;
 }
 .carousel {
   position: relative;
@@ -27,7 +26,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(240, 240, 240);
   border-radius: 50%;
   cursor: pointer;
   transition: transform ease-in 0.3s;
@@ -79,11 +77,3 @@
   padding-left: 2vw;
   opacity: 1;
 }
-/* .arrow:hover .back-hover:before {
-  opacity: 1;
-  left: 0;
-}
-.arrow:hover .next-hover:after {
-  opacity: 1;
-  right: 2vw;
-} */
