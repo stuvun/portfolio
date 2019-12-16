@@ -4,8 +4,8 @@ import NextArrow from "./NextArrow";
 import Slide from "./Slide";
 import Calendar from "../../images/calendar.gif";
 import Giphy from "../../images/giphy.gif";
-import Mock from "../../images/mock.gif";
 import Simon from "../../images/simon.gif";
+import Mock from "../../images/mock.gif";
 import "./Carousel.css";
 
 class Carousel extends React.Component {
