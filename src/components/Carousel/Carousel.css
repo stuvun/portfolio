@@ -1,9 +1,7 @@
 .carousel-container {
-  position: absolute;
   width: 100%;
 }
 .carousel {
-  position: relative;
   width: 60vw;
   height: 50vw;
   margin: 0 auto;

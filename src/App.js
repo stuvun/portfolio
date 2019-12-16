@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./App.css";
-import Projects from "./components/Projects/Projects";
 import Home from "./components/Home/Home";
+import Projects from "./components/Projects/Projects";
+import Resume from "./components/Resume/Resume";
 
 class App extends Component {
   render() {
@@ -19,9 +20,15 @@ class App extends Component {
               Projects
             </Link>
           </div>
+          <div className="resume-tab">
+            <Link to="/resume" className="resume-link link">
+              Resume
+            </Link>
+          </div>
         </nav>
         <Route path="/" exact component={Home}></Route>
         <Route path="/projects" exact component={Projects}></Route>
+        <Route path="/resume" exact component={Resume}></Route>
       </Router>
     );
   }
