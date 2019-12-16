@@ -1,0 +1,57 @@
+body {
+  background-color: rgb(240, 240, 240);
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 75px;
+  background-color: rgb(210, 210, 210);
+}
+.portfolio-tab {
+  text-align: center;
+  background-color: grey;
+  z-index: 10;
+  width: 150px;
+  height: 50px;
+  font-size: 1.5rem;
+  margin-left: -4px;
+  background-color: rgb(70, 110, 195);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 1px 1px 2px rgb(30, 30, 30), 2px 2px 4px rgb(30, 30, 30);
+}
+.projects-tab {
+  text-align: center;
+  background-color: grey;
+  margin-top: 6px;
+  margin-left: -20px;
+  z-index: 5;
+  width: 120px;
+  height: 40px;
+  background-color: rgb(20, 55, 130);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 1px 1px 1px rgba(30, 30, 30);
+}
+.portfolio-tab:hover {
+  margin: 2px -4px -2px 0px;
+  box-shadow: none;
+}
+.projects-tab:hover {
+  margin: 8px 0px -2px -18px;
+  box-shadow: none;
+}
+.link {
+  position: relative;
+  top: 20%;
+  color: rgba(240, 240, 240);
+  text-decoration: none;
+  text-shadow: -0.05vw -0.05vw 0 rgba(50, 50, 50, 0.9),
+    -0.075vw -0.075vw 0 rgba(50, 50, 50, 0.9);
+}
+.portfolio-tab:hover .link,
+.projects-tab:hover .link {
+  text-shadow: none;
+}
