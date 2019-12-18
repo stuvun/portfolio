@@ -6,15 +6,11 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  height: 75px;
-  padding-bottom: 5px;
+  user-select: none;
 }
-.dev-tab-container,
-.projects-tab-container,
-.resume-tab-container {
+.tab-container {
   display: flex;
   align-items: flex-end;
-  text-align: end;
   text-decoration: none;
   user-select: none;
   line-height: 2;
@@ -29,22 +25,9 @@ body {
   z-index: 6;
 }
 .dev-tab {
-  width: 130px;
-  height: 50px;
-  font-size: 1.5rem;
-  margin-left: -4px;
   background-color: rgb(35, 55, 165);
   color: white;
   box-shadow: 1px 1px rgb(20, 20, 60), 2px 2px rgb(20, 20, 60);
-}
-.projects-tab,
-.resume-tab {
-  margin-top: 14px;
-  margin-left: -25px;
-  width: 90px;
-  height: 40px;
-  transition: 0.2s ease;
-  line-height: 2.3;
 }
 .projects-tab {
   background-color: white;
@@ -54,36 +37,75 @@ body {
   background-color: rgb(75, 75, 75);
   color: white;
 }
-.dev-right-point {
-  border-top: 25px solid transparent;
-  border-bottom: 25px solid transparent;
-  border-left: 25px solid rgb(35, 55, 165);
-}
-.right-point {
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  transition: 0.2s ease;
-}
-.projects-tab-container .right-point {
-  border-left: 20px solid white;
-}
-.resume-tab-container .right-point {
-  border-left: 20px solid rgb(75, 75, 75);
-}
-.icon-container {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 10;
-}
-.icon-link {
-  color: black;
-}
-.icon {
-  margin: 2rem 1rem 0 0;
-}
 
 @media only screen and (min-width: 569px) {
+  .navbar {
+    height: 75px;
+    padding-bottom: 5px;
+  }
+  .tab-container {
+    text-align: end;
+  }
+  .dev-tab-container {
+    z-index: 10;
+  }
+  .projects-tab-container {
+    z-index: 8;
+  }
+  .resume-tab-container {
+    z-index: 6;
+  }
+  .dev-tab {
+    width: 130px;
+    height: 50px;
+    font-size: 1.5rem;
+    margin-left: -4px;
+  }
+  .projects-tab,
+  .resume-tab {
+    margin-top: 14px;
+    margin-left: -25px;
+    width: 90px;
+    height: 40px;
+    line-height: 2.3;
+    transition: 0.2s ease;
+  }
+  .projects-tab {
+    background-color: white;
+    color: black;
+  }
+  .resume-tab {
+    background-color: rgb(75, 75, 75);
+    color: white;
+  }
+  .dev-right-point {
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 25px solid rgb(35, 55, 165);
+  }
+  .right-point {
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    transition: 0.2s ease;
+  }
+  .projects-tab-container .right-point {
+    border-left: 20px solid white;
+  }
+  .resume-tab-container .right-point {
+    border-left: 20px solid rgb(75, 75, 75);
+  }
+  .icon-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+  }
+  .icon-link {
+    color: black;
+  }
+  .icon {
+    margin: 2rem 1rem 0 0;
+  }
   .projects-tab-container:active .projects-tab {
     background-color: rgb(75, 75, 75);
     transition: 0.1s ease;
@@ -134,18 +156,14 @@ body {
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   }
   .navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
     height: 50px;
-    user-select: none;
   }
   .dev-tab,
   .projects-tab,
   .resume-tab {
-    text-align: left;
-    width: 75px;
+    text-align: center;
+    line-height: 2.4;
+    width: 100px;
     height: 30px;
     font-size: 0.75rem;
   }
@@ -160,7 +178,7 @@ body {
   }
   .projects-tab,
   .resume-tab {
-    margin: 0 0 0 -20px;
+    margin: 0 0 0 -18px;
   }
   .resume-tab .link {
     color: rgba(240, 240, 240);
