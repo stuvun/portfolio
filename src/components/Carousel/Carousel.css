@@ -32,7 +32,6 @@
   justify-content: center;
   border-radius: 50%;
   cursor: pointer;
-  transition: transform ease-in 0.3s;
   text-align: center;
 }
 .arrow:hover {
@@ -66,18 +65,18 @@
   opacity: 0;
 }
 .arrow:hover .back {
-  padding-left: 2vw;
+  padding-left: 30px;
   opacity: 0.3;
 }
 .arrow:hover .next {
-  padding-right: 2vw;
+  padding-right: 30px;
   opacity: 0.3;
 }
 .arrow:hover .back-hover {
-  padding-right: 2vw;
+  padding-right: 30px;
   opacity: 1;
 }
 .arrow:hover .next-hover {
-  padding-left: 2vw;
+  padding-left: 30px;
   opacity: 1;
 }

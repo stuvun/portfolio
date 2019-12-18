@@ -5,7 +5,10 @@ import "./Home.css";
 const Home = () => {
   return (
     <div className="home-container">
-      <img src={Profile} alt="profile" className="profile" />
+      <figure className="profile-figure">
+        <img src={Profile} alt="profile" className="profile" />
+        <figcaption className="job-title">SOFTWARE ENGINEER</figcaption>
+      </figure>
     </div>
   );
 };
