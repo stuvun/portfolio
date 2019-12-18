@@ -47,7 +47,7 @@ class App extends Component {
         <div className="icon-container">
           <a
             href="https://www.linkedin.com/in/steven-kim-194202197/"
-            rel="linkedin"
+            rel="noopener noreferrer"
             target="_blank"
             className="icon-link"
           >
@@ -59,14 +59,14 @@ class App extends Component {
           </a>
           <a
             href="https://github.com/stuvun"
-            rel="github"
+            rel="noopener noreferrer"
             target="_blank"
             className="icon-link"
           >
             <FontAwesomeIcon
               icon={["fab", "github"]}
-              className="icon icon-github"
               size="2x"
+              className="icon icon-github"
             />
           </a>
         </div>
