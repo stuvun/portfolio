@@ -6,7 +6,7 @@
 .carousel {
   width: 800px;
   height: 600px;
-  margin: 0 auto;
+  margin: 5vw auto;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -28,26 +28,22 @@
   height: 80px;
   width: 80px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   border-radius: 50%;
   cursor: pointer;
-  text-align: center;
-}
-.arrow:hover {
-  background: rgb(230, 230, 230);
 }
 .back-arrow {
   position: fixed;
-  top: 50%;
-  left: 5%;
+  left: 10%;
+  top: 450px;
   color: black;
   z-index: 10;
 }
 .next-arrow {
   position: fixed;
-  top: 50%;
-  right: 5%;
+  top: 450px;
+  right: 10%;
   color: black;
   z-index: 10;
 }
@@ -57,7 +53,7 @@
 .next-hover {
   position: fixed;
   transition: 0.3s ease;
-  font-size: 2rem;
+  font-size: 3rem;
   user-select: none;
 }
 .back-hover,
@@ -65,18 +61,18 @@
   opacity: 0;
 }
 .arrow:hover .back {
-  padding-left: 30px;
+  padding-left: 35px;
   opacity: 0.3;
 }
 .arrow:hover .next {
-  padding-right: 30px;
+  padding-right: 35px;
   opacity: 0.3;
 }
 .arrow:hover .back-hover {
-  padding-right: 30px;
+  padding-right: 35px;
   opacity: 1;
 }
 .arrow:hover .next-hover {
-  padding-left: 30px;
+  padding-left: 35px;
   opacity: 1;
 }
