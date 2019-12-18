@@ -9,102 +9,15 @@ body {
   height: 75px;
   padding-bottom: 5px;
 }
-.dev-tab {
-  text-align: left;
-  width: 130px;
-  height: 50px;
-  font-size: 1.5rem;
-  margin-left: -4px;
-  background-color: rgb(35, 55, 165);
-  box-shadow: 1px 1px rgb(20, 20, 60), 2px 2px rgb(20, 20, 60);
-}
-.dev-tab .link {
-  position: relative;
-  top: 20%;
-  color: white;
-  text-decoration: none;
-  text-shadow: -0.05vw -0.05vw 0 rgba(50, 50, 50, 0.9),
-    -0.075vw -0.075vw 0 rgba(50, 50, 50, 0.9);
-}
-.dev-tab-container:hover .dev-tab {
-  background-color: rgb(15, 35, 130);
-}
-.dev-tab-container:hover .dev-right-point {
-  border-left: 25px solid rgb(15, 35, 130);
-}
-.dev-tab-container:active {
-  margin: 2px -1px -2px 1px;
-}
-.dev-tab-container:active .dev-tab {
-  box-shadow: none;
-}
-.dev-tab-container:active .link {
-  text-shadow: none;
-}
-.projects-tab {
-  margin-top: 14px;
-  margin-left: -25px;
-  width: 90px;
-  height: 40px;
-  background-color: white;
-  transition: 0.3s ease;
-}
-.projects-tab .link {
-  color: black;
-}
-.projects-tab:hover {
-  width: 130px;
-}
-.projects-tab:active {
-  background-color: rgb(75, 75, 75);
-  transition: 0.1s ease;
-}
-.projects-tab:active .link {
-  color: white;
-}
-.resume-tab {
-  text-align: center;
-  margin-top: 14px;
-  margin-left: -25px;
-  width: 90px;
-  height: 40px;
-  background-color: rgb(75, 75, 75);
-  transition: 0.3s ease;
-}
-.resume-tab:hover {
-  width: 130px;
-}
-.resume-tab:active {
-  background-color: white;
-  transition: 0.1s ease;
-}
-.resume-tab:active .link {
-  color: black;
-}
-.dev-tab .link {
-  position: relative;
-  top: 20%;
-  color: rgba(240, 240, 240);
-  text-decoration: none;
-  user-select: none;
-  padding: 20px 25% 20px 12%;
-}
-.projects-tab .link,
-.resume-tab .link {
-  position: relative;
-  top: 25%;
-  text-decoration: none;
-  user-select: none;
-  padding: 20px 25% 20px 34%;
-}
-.resume-tab .link {
-  color: rgba(240, 240, 240);
-}
-.tab-container {
+.dev-tab-container,
+.projects-tab-container,
+.resume-tab-container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: flex-end;
+  text-align: end;
+  text-decoration: none;
+  user-select: none;
+  line-height: 2;
 }
 .dev-tab-container {
   z-index: 10;
@@ -115,42 +28,47 @@ body {
 .resume-tab-container {
   z-index: 6;
 }
+.dev-tab {
+  width: 130px;
+  height: 50px;
+  font-size: 1.5rem;
+  margin-left: -4px;
+  background-color: rgb(35, 55, 165);
+  color: white;
+  box-shadow: 1px 1px rgb(20, 20, 60), 2px 2px rgb(20, 20, 60);
+}
+.projects-tab,
+.resume-tab {
+  margin-top: 14px;
+  margin-left: -25px;
+  width: 90px;
+  height: 40px;
+  transition: 0.2s ease;
+  line-height: 2.3;
+}
+.projects-tab {
+  background-color: white;
+  color: black;
+}
+.resume-tab {
+  background-color: rgb(75, 75, 75);
+  color: white;
+}
 .dev-right-point {
-  width: 0;
-  height: 0;
   border-top: 25px solid transparent;
   border-bottom: 25px solid transparent;
   border-left: 25px solid rgb(35, 55, 165);
 }
 .right-point {
-  position: relative;
-  left: -0.5%;
-  width: 0;
-  height: 0;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
+  transition: 0.2s ease;
 }
 .projects-tab-container .right-point {
   border-left: 20px solid white;
-  transition: 0.3s ease;
 }
 .resume-tab-container .right-point {
   border-left: 20px solid rgb(75, 75, 75);
-  transition: 0.3s ease;
-}
-.projects-tab-container:active .projects-tab {
-  background-color: rgb(75, 75, 75);
-}
-.projects-tab-container:active .right-point {
-  border-left: 25px solid rgb(75, 75, 75);
-  transition: 0.1s ease;
-}
-.resume-tab-container:active .resume-tab {
-  background-color: white;
-}
-.resume-tab-container:active .right-point {
-  border-left: 25px solid white;
-  transition: 0.1s ease;
 }
 .icon-container {
   position: fixed;
@@ -163,4 +81,108 @@ body {
 }
 .icon {
   margin: 2rem 1rem 0 0;
+}
+
+@media only screen and (min-width: 569px) {
+  .projects-tab-container:active .projects-tab {
+    background-color: rgb(75, 75, 75);
+    transition: 0.1s ease;
+  }
+  .projects-tab-container:active .right-point {
+    border-left: 25px solid rgb(75, 75, 75);
+    transition: 0.1s ease;
+  }
+  .projects-tab-container:active .link {
+    color: white;
+    transition: 0.1s ease;
+  }
+  .resume-tab-container:active .resume-tab {
+    background-color: white;
+    transition: 0.1s ease;
+  }
+  .resume-tab-container:active .right-point {
+    border-left: 25px solid white;
+    transition: 0.1s ease;
+  }
+  .resume-tab-container:active .link {
+    color: black;
+    transition: 0.1s ease;
+  }
+  .dev-tab-container:active {
+    margin: 2px -1px -2px 1px;
+  }
+  .dev-tab-container:active .dev-tab {
+    box-shadow: none;
+  }
+  .dev-tab-container:active .link {
+    text-shadow: none;
+  }
+  .dev-tab-container:hover .dev-tab {
+    background-color: rgb(15, 35, 130);
+  }
+  .dev-tab-container:hover .dev-right-point {
+    border-left: 25px solid rgb(15, 35, 130);
+  }
+  .projects-tab:hover,
+  .resume-tab:hover {
+    width: 130px;
+    transition: 0.2s ease;
+  }
+}
+@media only screen and (max-width: 568px) {
+  body {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  }
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+    user-select: none;
+  }
+  .dev-tab,
+  .projects-tab,
+  .resume-tab {
+    text-align: left;
+    width: 75px;
+    height: 30px;
+    font-size: 0.75rem;
+  }
+  .dev-tab:active,
+  .projects-tab:active,
+  .resume-tab:active {
+    transition: none;
+  }
+  .dev-tab {
+    box-shadow: none;
+    margin: 0;
+  }
+  .projects-tab,
+  .resume-tab {
+    margin: 0 0 0 -20px;
+  }
+  .resume-tab .link {
+    color: rgba(240, 240, 240);
+  }
+  .tab-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .dev-right-point,
+  .right-point {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+  }
+  .dev-right-point {
+    border-left: 15px solid rgb(35, 55, 165);
+  }
+  .projects-tab-container .right-point {
+    border-left: 20px solid white;
+  }
+  .resume-tab-container .right-point {
+    border-left: 20px solid rgb(75, 75, 75);
+  }
 }

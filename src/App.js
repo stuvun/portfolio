@@ -15,30 +15,27 @@ class App extends Component {
       <div className="main-nav">
         <Router>
           <nav className="navbar">
-            <div className="dev-tab-container tab-container">
+            <Link to="/" className="dev-tab-container tab-container">
               <div className="dev-tab">
-                <Link to="/" className="dev-link link">
-                  Developer
-                </Link>
+                <span className="dev-link link">Developer</span>
               </div>
               <div className="dev-right-point" />
-            </div>
-            <div className="projects-tab-container tab-container">
+            </Link>
+            <Link
+              to="/projects"
+              className="projects-tab-container tab-container"
+            >
               <div className="projects-tab">
-                <Link to="/projects" className="projects-link link">
-                  Projects
-                </Link>
+                <span className="projects-link link">Projects</span>
               </div>
               <div className="right-point" />
-            </div>
-            <div className="resume-tab-container tab-container">
+            </Link>
+            <Link to="/resume" className="resume-tab-container tab-container">
               <div className="resume-tab">
-                <Link to="/resume" className="resume-link link">
-                  Resume
-                </Link>
+                <span className="resume-link link">Resume</span>
               </div>
               <div className="right-point" />
-            </div>
+            </Link>
           </nav>
           <Route path="/" exact component={Home}></Route>
           <Route path="/projects" exact component={Projects}></Route>
