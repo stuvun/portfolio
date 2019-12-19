@@ -1,6 +1,12 @@
 body {
-  background-color: rgb(210, 210, 220);
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  background: linear-gradient(
+    300deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(100, 100, 100, 0.4) 100%
+  );
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 .navbar {
   display: flex;
@@ -148,18 +154,6 @@ body {
   }
   .resume-tab-container .right-point {
     border-left: 20px solid rgb(75, 75, 75);
-  }
-  .icon-container {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 10;
-  }
-  .icon-link {
-    color: black;
-  }
-  .icon {
-    margin: 2rem 1rem 0 0;
   }
   .projects-tab-container:active .projects-tab {
     background-color: rgb(75, 75, 75);
