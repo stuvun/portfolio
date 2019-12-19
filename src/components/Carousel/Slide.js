@@ -9,7 +9,7 @@ const Slide = ({ image, label }) => {
   };
   return (
     <div className="slide" style={styles}>
-      {label}
+      <span className="label">{label}</span>
     </div>
   );
 };

@@ -13,7 +13,7 @@ class App extends Component {
           <nav className="navbar">
             <Link to="/" className="dev-tab-container tab-container">
               <div className="dev-tab">
-                <span className="dev-link link">Developer</span>
+                <span className="dev-link link">DEVELOPER</span>
               </div>
               <div className="dev-right-point" />
             </Link>
@@ -22,13 +22,13 @@ class App extends Component {
               className="projects-tab-container tab-container"
             >
               <div className="projects-tab">
-                <span className="projects-link link">Projects</span>
+                <span className="projects-link link">PROJECTS</span>
               </div>
               <div className="right-point" />
             </Link>
             <Link to="/resume" className="resume-tab-container tab-container">
               <div className="resume-tab">
-                <span className="resume-link link">Resume</span>
+                <span className="resume-link link">RESUME</span>
               </div>
               <div className="right-point" />
             </Link>

@@ -1,21 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300&display=swap");
-
 .carousel-container {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 .carousel {
-  width: 800px;
-  height: 600px;
-  margin: 5vw auto;
-  overflow: hidden;
+  overflow-x: hidden;
   white-space: nowrap;
-}
-.carousel-wrapper {
   width: 100%;
-  height: 100%;
-  user-select: none;
 }
 .slide {
   display: inline-block;
@@ -28,7 +20,7 @@
 }
 .arrow {
   height: 80px;
-  width: 80px;
+  min-width: 15rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,17 +60,17 @@
 }
 @media only screen and (max-width: 320px) {
   .carousel-container {
-    width: 100%;
+    max-width: 320px;
   }
   .carousel-wrapper {
-    width: 100%;
-    height: 100%;
+    max-width: 320px;
+    height: 240px;
     user-select: none;
   }
   .slide {
     display: inline-block;
-    height: 100%;
-    width: 100%;
+    max-width: 320px;
+    height: 240px;
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-size: 3rem;
@@ -95,7 +87,7 @@
   }
   .back-arrow {
     position: fixed;
-    left: 35%;
+    left: 0;
     top: 50%;
     color: black;
     z-index: 10;
@@ -103,7 +95,7 @@
   .next-arrow {
     position: fixed;
     top: 50%;
-    right: 35%;
+    right: 0;
     color: black;
     z-index: 10;
   }
@@ -121,29 +113,21 @@
     opacity: 0;
   }
 }
-@media only screen and (max-width: 568px) {
+@media only screen and (min-width: 321px) and (max-width: 768px) {
   .carousel-container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 568px;
-  }
-  .carousel {
-    width: 360px;
-    height: 270px;
-    overflow: hidden;
-    white-space: nowrap;
+    flex-direction: column;
+    width: 100%;
+    margin: 2rem -2%;
   }
   .carousel-wrapper {
-    width: 360px;
-    height: 270px;
+    width: 100%;
     user-select: none;
   }
   .slide {
     display: inline-block;
-    height: 100%;
     width: 100%;
+    min-height: 500px;
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-size: 2rem;
@@ -161,11 +145,98 @@
     align-items: center;
     border-radius: 50%;
     cursor: pointer;
+    z-index: 20;
   }
   .back-arrow {
+    position: fixed;
+    left: 0;
     color: black;
   }
   .next-arrow {
+    position: fixed;
+    right: 0;
+    color: black;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .carousel-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 2rem -2%;
+  }
+  .carousel-wrapper {
+    width: 100%;
+    user-select: none;
+  }
+  .slide {
+    display: inline-block;
+    width: 100%;
+    min-height: 500px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    padding-bottom: 10%;
+  }
+  .arrow {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20;
+  }
+  .back-arrow {
+    position: fixed;
+    left: 0;
+    color: black;
+  }
+  .next-arrow {
+    position: fixed;
+    right: 0;
+    color: black;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .carousel-container {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: 2rem -2%;
+  }
+  .carousel-wrapper {
+    width: 100%;
+    user-select: none;
+  }
+  .slide {
+    display: inline-block;
+    width: 100%;
+    min-height: 600px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    padding-bottom: 10%;
+  }
+  .arrow {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20;
+  }
+  .back-arrow {
+    position: fixed;
+    left: 0;
+    color: black;
+  }
+  .next-arrow {
+    position: fixed;
+    right: 0;
     color: black;
   }
 }
