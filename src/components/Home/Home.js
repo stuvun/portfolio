@@ -6,6 +6,9 @@ import { ReactComponent as CSS } from "../../images/css.svg";
 import { ReactComponent as ReactJS } from "../../images/react.svg";
 import { ReactComponent as LinkedIn } from "../../images/linkedin.svg";
 import { ReactComponent as GitHub } from "../../images/github.svg";
+import { ReactComponent as Postgres } from "../../images/postgres.svg";
+import { ReactComponent as Mongodb } from "../../images/mongodb.svg";
+import { ReactComponent as Agile } from "../../images/agile.svg";
 import "./Home.css";
 
 const Home = () => {
@@ -53,6 +56,18 @@ const Home = () => {
           <figure className="figure">
             <ReactJS className="icon react" />
             <figcaption className="caption">REACT NATIVE</figcaption>
+          </figure>
+          <figure className="figure">
+            <Postgres className="icon postgres" />
+            <figcaption className="caption">POSTGRESQL</figcaption>
+          </figure>
+          <figure className="figure">
+            <Mongodb className="icon mongodb" />
+            <figcaption className="caption">MONGODB</figcaption>
+          </figure>
+          <figure className="figure">
+            <Agile className="icon agile" />
+            <figcaption className="caption">AGILE</figcaption>
           </figure>
         </div>
       </div>
