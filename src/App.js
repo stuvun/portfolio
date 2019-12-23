@@ -4,7 +4,6 @@ import "./App.css";
 import Home from "./components/Home/Home";
 import Projects from "./components/Projects/Projects";
 import Resume from "./components/Resume/Resume";
-import ComponentTesting from "./components/ComponentTesting/ComponentTesting";
 
 class App extends Component {
   render() {
@@ -33,17 +32,10 @@ class App extends Component {
               </div>
               <div className="right-point" />
             </Link>
-            <Link to="/testing" className="resume-tab-container tab-container">
-              <div className="resume-tab">
-                <span className="resume-link link">TESTING</span>
-              </div>
-              <div className="right-point" />
-            </Link>
           </nav>
           <Route path="/" exact component={Home}></Route>
           <Route path="/projects" exact component={Projects}></Route>
           <Route path="/resume" exact component={Resume}></Route>
-          <Route path="/testing" exact component={ComponentTesting}></Route>
         </Router>
       </div>
     );
