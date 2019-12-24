@@ -1,27 +1,27 @@
 [
   {
-    "name": "Calendar App",
+    "name": "CALENDAR APP",
     "technologies": ["MongoDB", "ExpressJS", "ReactJS", "NodeJS", "Storybook"],
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque rem officiis dicta et quod, odio nisi eaque assumenda rerum adipisci obcaecati vero hic autem repellat maiores. Repudiandae tempora aut maxime?",
     "deployment": "https://calanderproject.netlify.com/",
     "repository": "https://github.com/stuvun/calendarprojectMERN"
   },
   {
-    "name": "Simon",
+    "name": "SIMON",
     "technologies": ["JavaScript", "HTML", "CSS"],
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque rem officiis dicta et quod, odio nisi eaque assumenda rerum adipisci obcaecati vero hic autem repellat maiores. Repudiandae tempora aut maxime?",
     "deployment": "https://stuvun.github.io/simon/",
     "repository": "https://github.com/stuvun/simon"
   },
   {
-    "name": "Giphy Slider UI",
+    "name": "GIPHY SLIDER UI",
     "technologies": ["JavaScript", "HTML", "CSS"],
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque rem officiis dicta et quod, odio nisi eaque assumenda rerum adipisci obcaecati vero hic autem repellat maiores. Repudiandae tempora aut maxime?",
     "deployment": "https://stuvun.github.io/giphyslider/",
     "repository": "https://github.com/stuvun/giphyslider"
   },
   {
-    "name": "Mock Site",
+    "name": "MOCK SITE",
     "technologies": ["HTML", "CSS"],
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque rem officiis dicta et quod, odio nisi eaque assumenda rerum adipisci obcaecati vero hic autem repellat maiores. Repudiandae tempora aut maxime?",
     "deployment": "https://stuvun.github.io/mocksite/",

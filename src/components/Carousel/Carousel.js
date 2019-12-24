@@ -3,20 +3,21 @@ import BackArrow from "./BackArrow";
 import NextArrow from "./NextArrow";
 import Slide from "./Slide";
 import Calendar from "../../images/calendar.gif";
-import Giphy from "../../images/giphy.gif";
 import Simon from "../../images/simon.gif";
+import Giphy from "../../images/giphy.gif";
 import Mock from "../../images/mock.gif";
+import ProjectData from "../ProjectData/ProjectData.json";
 import "./Carousel.css";
 
 class Carousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      images: [Calendar, Giphy, Simon, Mock],
-      labels: ["Calendar App", "Giphy Slider UI", "Simon Game", "Mock Site"],
+      images: [Calendar, Simon, Giphy, Mock],
       index: 0,
       translate: 0
     };
+    this.ProjectData = ProjectData;
   }
 
   previous = () => {
@@ -64,7 +65,23 @@ class Carousel extends React.Component {
             }}
           >
             {this.state.images.map((image, i) => (
-              <Slide key={i} image={image} label={this.state.labels[i]} />
+              <Slide
+                key={i}
+                image={image}
+                name={ProjectData[i].name}
+                technologies={ProjectData[i].technologies.map(
+                  (technology, j) => {
+                    return (
+                      <li className="technology" key={j}>
+                        {technology}
+                      </li>
+                    );
+                  }
+                )}
+                description={ProjectData[i].description}
+                deployment={ProjectData[i].deployment}
+                repository={ProjectData[i].repository}
+              />
             ))}
           </div>
         </div>

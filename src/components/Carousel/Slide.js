@@ -1,7 +1,13 @@
 import React from "react";
-import ProjectData from "../ProjectData/ProjectData.json";
 
-const Slide = ({ image, label }) => {
+const Slide = ({
+  image,
+  name,
+  technologies,
+  description,
+  deployment,
+  repository
+}) => {
   const styles = {
     backgroundImage: `url(${image})`,
     backgroundSize: "contain",
@@ -9,40 +15,38 @@ const Slide = ({ image, label }) => {
     backgroundPosition: "center center"
   };
   return (
-    <div>
-      <div>
-        {ProjectData.map((project, index) => {
-          return (
-            <div key={index}>
-              <div>
-                <h1>{project.name}</h1>
-                <h2>Technologies Used</h2>
-                <ul>
-                  {project.technologies.map((technology, i) => {
-                    return <li key={i}>{technology}</li>;
-                  })}
-                </ul>
-                <a
-                  href={project.deployment}
-                  rel="deployed app"
-                  target="__blank noreferrer"
-                >
-                  Deployed App
-                </a>
-                <a
-                  href={project.repository}
-                  rel="repository"
-                  target="__blank noreferrer"
-                >
-                  Respository
-                </a>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-      <div className="slide" style={styles}>
-        <span className="label">{label}</span>
+    <div className="slide">
+      <h1 className="name">{name}</h1>
+      <div className="slide-contents">
+        <div className="image" style={styles} />
+        <div className="project-details">
+          <div className="technologies-container">
+            <h2 className="title">TECHNOLOGIES</h2>
+            <div className="details">{technologies}</div>
+          </div>
+          <div className="description-container">
+            <h2 className="title">SUMMARY</h2>
+            <div className="details">{description}</div>
+          </div>
+          <div className="project-link-container">
+            <a
+              className="project-link"
+              href={deployment}
+              rel="deployment"
+              target="__blank noreferrer"
+            >
+              DEPLOYED SITE
+            </a>
+            <a
+              className="project-link"
+              href={repository}
+              rel="repository"
+              target="__blank noreferrer"
+            >
+              REPOSITORY
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
