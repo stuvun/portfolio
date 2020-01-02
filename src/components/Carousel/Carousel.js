@@ -55,7 +55,10 @@ class Carousel extends React.Component {
   render() {
     return (
       <div className="carousel-container">
-        <BackArrow previous={this.previous} className="back-component" />
+        <div className="arrow-container">
+          <BackArrow previous={this.previous} className="back-component" />
+          <NextArrow next={this.next} className="next-component" />
+        </div>
         <div className="carousel">
           <div
             className="carousel-wrapper"
@@ -77,7 +80,6 @@ class Carousel extends React.Component {
             ))}
           </div>
         </div>
-        <NextArrow next={this.next} className="next-component" />
       </div>
     );
   }

@@ -10,7 +10,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     const menuStyles = {
-      visibility: "visible"
+      visibility: "hidden"
     };
     this.state = {
       menuStyles
