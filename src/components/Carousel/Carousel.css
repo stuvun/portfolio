@@ -291,7 +291,7 @@
   }
   .arrow-container {
     width: 450px;
-    top: 55px;
+    top: 88px;
   }
   .slide {
     display: inline-block;
@@ -305,6 +305,7 @@
   .name {
     font-size: 2.5rem;
     font-weight: 400;
+    margin-top: 32px;
   }
   .description {
     font-size: 1.1rem;

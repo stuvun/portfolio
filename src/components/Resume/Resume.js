@@ -8,7 +8,12 @@ class Resume extends Component {
   render() {
     return (
       <div className="resume-container">
-        <a className="pdf-link" href={resumeLink} target="_blank" rel="noopener noreferrer">
+        <a
+          className="pdf-link"
+          href={resumeLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={PDF} rel="pdf" className="pdf" alt="pdf" />
           <span className="view">View PDF</span>
         </a>

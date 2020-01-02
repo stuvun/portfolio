@@ -16,7 +16,11 @@ const Home = () => {
     <div className="home-container">
       <figure className="profile-figure">
         <img src={Profile} alt="profile" className="profile" />
-        <figcaption className="caption job-title">WEB DEVELOPER</figcaption>
+        <figcaption className="caption job-title">
+          <span className="dev-name">STEVEN KIM</span>
+          <br />
+          WEB DEVELOPER
+        </figcaption>
         <div className="icon-container">
           <a
             href="https://www.linkedin.com/in/steven-kim-194202197/"
