@@ -69,15 +69,7 @@ class Carousel extends React.Component {
                 key={i}
                 image={image}
                 name={ProjectData[i].name}
-                technologies={ProjectData[i].technologies.map(
-                  (technology, j) => {
-                    return (
-                      <li className="technology" key={j}>
-                        {technology}
-                      </li>
-                    );
-                  }
-                )}
+                technologies={ProjectData[i].technologies}
                 description={ProjectData[i].description}
                 deployment={ProjectData[i].deployment}
                 repository={ProjectData[i].repository}

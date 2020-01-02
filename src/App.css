@@ -53,7 +53,7 @@ body {
   background-color: rgb(75, 75, 75);
   color: white;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .navbar {
     min-width: 100%;
     max-width: 100%;
@@ -109,7 +109,7 @@ body {
     display: hidden;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   body {
     min-height: 100vh;
   }
@@ -197,9 +197,11 @@ body {
   .dev-tab-container:active .dev-tab {
     box-shadow: none;
   }
-  .projects-tab:hover,
-  .resume-tab:hover {
-    width: 240px;
-    transition: 0.2s ease;
+  @media (hover: hover) {
+    .projects-tab:hover,
+    .resume-tab:hover {
+      width: 240px;
+      transition: 0.2s ease;
+    }
   }
 }

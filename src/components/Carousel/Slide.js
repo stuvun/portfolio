@@ -1,4 +1,6 @@
 import React from "react";
+import { ReactComponent as GitHub } from "../../images/github.svg";
+import { ReactComponent as Internet } from "../../images/internet.svg";
 
 const Slide = ({
   image,
@@ -16,18 +18,17 @@ const Slide = ({
   };
   return (
     <div className="slide">
-      <h1 className="name">{name}</h1>
+      <div className="header">
+        <h1 className="name">{name}</h1>
+      </div>
       <div className="slide-contents">
-        <div className="image" style={styles} />
-        <div className="project-details">
-          <div className="technologies-container">
+        <figure className="image-container">
+          <div className="image" style={styles} />
+          <figcaption className="description">
+            {description}
             <h2 className="title">TECHNOLOGIES</h2>
             <div className="details">{technologies}</div>
-          </div>
-          <div className="description-container">
-            <h2 className="title">SUMMARY</h2>
-            <div className="details">{description}</div>
-          </div>
+          </figcaption>
           <div className="project-link-container">
             <a
               className="project-link"
@@ -35,7 +36,10 @@ const Slide = ({
               rel="deployment"
               target="__blank noreferrer"
             >
-              DEPLOYED SITE
+              <figure>
+                <Internet className="title-icon internet" />
+                <figcaption>Deployed App</figcaption>
+              </figure>
             </a>
             <a
               className="project-link"
@@ -43,10 +47,13 @@ const Slide = ({
               rel="repository"
               target="__blank noreferrer"
             >
-              REPOSITORY
+              <figure>
+                <GitHub className="title-icon github" />
+                <figcaption>Repository</figcaption>
+              </figure>
             </a>
           </div>
-        </div>
+        </figure>
       </div>
     </div>
   );

@@ -18,27 +18,38 @@
 }
 .slide-contents {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+  white-space: normal;
+}
+.image-container {
+  width: 80%;
+  height: 100%;
+  margin: 0;
+  white-space: normal;
 }
 .image {
-  width: 40%;
+  width: 100%;
+  height: 450px;
 }
-.project-details {
-  width: 40%;
+.description {
+  margin-top: 5px;
+  font-size: 1rem;
 }
 .name {
   font-size: 3rem;
   font-weight: 200;
+  margin: 0;
 }
 .technologies-container,
-.description-container {
+.description {
   text-align: left;
   white-space: normal;
 }
 .title {
   font-size: 1.5rem;
   font-weight: 100;
+  margin-bottom: 0;
 }
 .details {
   font-size: 1rem;
@@ -46,9 +57,8 @@
 }
 .project-link-container {
   display: flex;
-  flex-direction: column;
-  text-align: left;
-  margin-top: 10px;
+  flex-direction: row;
+  justify-content: center;
 }
 .project-link {
   text-decoration: none;
@@ -80,6 +90,11 @@
 .next-hover {
   opacity: 0;
 }
+.internet {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
 @media (hover: hover) {
   .arrow:hover .back {
     padding-left: 35px;
@@ -98,6 +113,130 @@
     opacity: 1;
   }
 }
+/* @media only screen and (max-width: 320px) {
+  .carousel-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2rem -2%;
+  }
+  .carousel-wrapper {
+    width: 100%;
+    user-select: none;
+  }
+  .slide {
+    display: inline-block;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    padding-bottom: 10%;
+    white-space: normal;
+  }
+  .name {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .description {
+    font-size: 0.9rem;
+    font-weight: 200;
+    width: 300px;
+  }
+  .image {
+    height: 53vw;
+  }
+  .title {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+  .details {
+    font-size: 0.9rem;
+  }
+  .arrow {
+    height: 50px;
+    max-width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20;
+  }
+  .back-arrow {
+    position: fixed;
+    top: 50%;
+    left: -70px;
+    color: black;
+  }
+  .next-arrow {
+    position: fixed;
+    top: 50%;
+    right: -70px;
+    color: black;
+  }
+} */
+@media only screen and (max-width: 568px) {
+  .carousel-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2rem -2%;
+  }
+  .carousel-wrapper {
+    width: 100%;
+    user-select: none;
+  }
+  .slide {
+    display: inline-block;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    padding-bottom: 10%;
+    white-space: normal;
+  }
+  .name {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .description {
+    font-size: 0.9rem;
+    font-weight: 200;
+  }
+  .image {
+    min-width: 300px;
+    height: 50vw;
+  }
+  .title {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+  .details {
+    font-size: 0.9rem;
+  }
+  .arrow {
+    height: 50px;
+    max-width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20;
+  }
+  .back-arrow {
+    position: fixed;
+    top: 50%;
+    left: -70px;
+    color: black;
+  }
+  .next-arrow {
+    position: fixed;
+    top: 50%;
+    right: -70px;
+    color: black;
+  }
+}
 @media only screen and (max-width: 768px) {
   .carousel-container {
     display: flex;
@@ -112,19 +251,35 @@
   .slide {
     display: inline-block;
     width: 100%;
-    min-height: 500px;
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-size: 2rem;
     padding-bottom: 10%;
+    white-space: normal;
   }
-  .arrow-container {
-    display: flex;
-    justify-content: center;
+  .name {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .description {
+    font-size: 0.9rem;
+    font-weight: 200;
+  }
+  .image {
+    width: 100%;
+    height: 53vw;
+  }
+  .title {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+  .details {
+    font-size: 0.9rem;
   }
   .arrow {
-    height: 80px;
-    width: 80px;
+    height: 50px;
+    max-width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,61 +289,23 @@
   }
   .back-arrow {
     position: fixed;
-    left: 0;
+    top: 50%;
+    left: -70px;
     color: black;
   }
   .next-arrow {
     position: fixed;
-    right: 0;
+    top: 50%;
+    right: -70px;
     color: black;
   }
 }
-/* @media only screen and (min-width: 769px) and (max-width: 992px) {
-  .carousel-container {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: 2rem -2%;
-  }
-  .carousel-wrapper {
-    width: 100%;
-    user-select: none;
-  }
-  .slide {
-    display: inline-block;
-    width: 100%;
-    min-height: 500px;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size: 2rem;
-    padding-bottom: 10%;
-  }
-  .arrow {
-    height: 80px;
-    width: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 20;
-  }
-  .back-arrow {
-    position: fixed;
-    left: 0;
-    color: black;
-  }
-  .next-arrow {
-    position: fixed;
-    right: 0;
-    color: black;
-  }
-} */
 @media only screen and (min-width: 769px) {
   .carousel-container {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    min-width: 750px;
+    max-width: 750px;
     margin: 2rem -2%;
   }
   .carousel-wrapper {
@@ -204,6 +321,10 @@
     font-size: 2rem;
     padding-bottom: 10%;
   }
+  .image {
+    width: 700px;
+    height: 400px;
+  }
   .arrow {
     height: 80px;
     width: 80px;
@@ -217,10 +338,12 @@
   .back-arrow {
     position: fixed;
     left: 0;
+    top: 50%;
     color: black;
   }
   .next-arrow {
     position: fixed;
+    top: 50%;
     right: 0;
     color: black;
   }
