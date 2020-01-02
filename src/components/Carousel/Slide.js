@@ -36,9 +36,9 @@ const Slide = ({
               rel="deployment"
               target="__blank noreferrer"
             >
-              <figure>
+              <figure className="link-figure">
                 <Internet className="title-icon internet" />
-                <figcaption>Deployed App</figcaption>
+                <figcaption>Deployed Site</figcaption>
               </figure>
             </a>
             <a
@@ -47,7 +47,7 @@ const Slide = ({
               rel="repository"
               target="__blank noreferrer"
             >
-              <figure>
+              <figure className="link-figure">
                 <GitHub className="title-icon github" />
                 <figcaption>Repository</figcaption>
               </figure>
