@@ -10,6 +10,29 @@ class App extends Component {
     return (
       <div className="main-nav">
         <Router>
+          <div className="menu-wrap">
+            <input type="checkbox" className="toggler" />
+            <div className="hamburger">
+              <div></div>
+            </div>
+            <div className="menu">
+              <div>
+                <div>
+                  <ul>
+                    <li>
+                      <Link to="/">HOME</Link>
+                    </li>
+                    <li>
+                      <Link to="/projects">PROJECTS</Link>
+                    </li>
+                    <li>
+                      <Link to="/resume">RESUME</Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
           <nav className="navbar">
             <Link to="/" className="dev-tab-container tab-container">
               <div className="dev-tab">
