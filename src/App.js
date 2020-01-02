@@ -1,59 +1,88 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./App.css";
+import DevLogo from "./images/portfolioLogo.png";
 import Home from "./components/Home/Home";
 import Projects from "./components/Projects/Projects";
 import Resume from "./components/Resume/Resume";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    const menuStyles = {
+      visibility: "visible"
+    };
+    this.state = {
+      menuStyles
+    };
+  }
+  handleLinkClick = () => {
+    this.setState({ menuStyles: { visibility: "hidden" } });
+  };
+  handleBurgerClick = () => {
+    this.setState({ menuStyles: { visibility: "visible" } });
+  };
   render() {
     return (
       <div className="main-nav">
         <Router>
           <div className="menu-wrap">
-            <input type="checkbox" className="toggler" />
+            <input
+              type="checkbox"
+              className="toggler"
+              onClick={this.handleBurgerClick}
+            />
             <div className="hamburger">
               <div></div>
             </div>
-            <div className="menu">
+            <div className="menu" style={this.state.menuStyles}>
               <div>
-                <div>
-                  <ul>
-                    <li>
-                      <Link to="/">HOME</Link>
-                    </li>
-                    <li>
-                      <Link to="/projects">PROJECTS</Link>
-                    </li>
-                    <li>
-                      <Link to="/resume">RESUME</Link>
-                    </li>
-                  </ul>
+                <div className="menu-list">
+                  <div className="item-container"></div>
+                  <Link
+                    to="/"
+                    className="menu-item"
+                    onClick={this.handleLinkClick}
+                  >
+                    HOME
+                  </Link>
+                  <Link
+                    to="/projects"
+                    className="menu-item"
+                    onClick={this.handleLinkClick}
+                  >
+                    PROJECTS
+                  </Link>
+                  <Link
+                    to="/resume"
+                    className="menu-item"
+                    onClick={this.handleLinkClick}
+                  >
+                    RESUME
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
           <nav className="navbar">
-            <Link to="/" className="dev-tab-container tab-container">
-              <div className="dev-tab">
-                <span className="dev-link link">DEVELOPER</span>
-              </div>
-              <div className="dev-right-point" />
+            <Link to="/" className="dev-logo-container">
+              <img src={DevLogo} alt="developer-logo" className="dev-logo" />
+            </Link>
+            <Link to="/" className="nav-link home-link" title="HOME">
+              HOME
+              <div className="underline" />
             </Link>
             <Link
               to="/projects"
-              className="projects-tab-container tab-container"
+              className="nav-link projects-link"
+              title="PROJECTS"
             >
-              <div className="projects-tab">
-                <span className="projects-link link">PROJECTS</span>
-              </div>
-              <div className="right-point" />
+              PROJECTS
+              <div className="underline" />
             </Link>
-            <Link to="/resume" className="resume-tab-container tab-container">
-              <div className="resume-tab">
-                <span className="resume-link link">RESUME</span>
-              </div>
-              <div className="right-point" />
+            <Link to="/resume" className="nav-link resume-link" title="RESUME">
+              RESUME
+              <div className="underline" />
             </Link>
           </nav>
           <Route path="/" exact component={Home}></Route>

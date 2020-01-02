@@ -48,7 +48,7 @@ const Slide = ({
               target="__blank noreferrer"
             >
               <figure className="link-figure">
-                <GitHub className="title-icon github" />
+                <GitHub className="title-icon repository" />
                 <figcaption>Repository</figcaption>
               </figure>
             </a>
