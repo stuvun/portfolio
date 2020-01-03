@@ -62,6 +62,7 @@
   white-space: wrap;
   width: 300px;
   margin-top: 20px;
+  z-index: 15;
 }
 .link-figure {
   margin: 0;
