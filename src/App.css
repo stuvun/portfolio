@@ -204,8 +204,9 @@ body {
   width: 0px;
   height: 1px;
   display: block;
-  background: rgb(0, 0, 0);
+  background: tomato;
   transition: 0.2s ease-out;
+  margin: 0 auto;
 }
 @media (hover: hover) {
   .nav-link:hover .underline {
@@ -213,8 +214,7 @@ body {
     transition: 0.2s ease-out;
   }
   .nav-link:hover {
-    font-weight: bold;
-    margin-top: -1px;
+    color: crimson;
   }
 }
 @media only screen and (max-width: 768px) {
