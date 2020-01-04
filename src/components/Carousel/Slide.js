@@ -19,7 +19,7 @@ const Slide = ({
   return (
     <div className="slide">
       <div className="header">
-        <h1 className="name">{name}</h1>
+        <span className="name">{name}</span>
       </div>
       <div className="slide-contents">
         <figure className="image-container">
