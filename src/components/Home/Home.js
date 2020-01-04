@@ -49,7 +49,7 @@ const Home = () => {
           <span className="about-description">
             Hello! I'm a full-stack developer from Columbia, Maryland who is an
             active learner and problem solver. My ongoing goal is to never stop
-            learning!
+            improving!
           </span>
         </div>
       </div>

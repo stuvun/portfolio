@@ -2,12 +2,11 @@ import React from "react";
 import BackArrow from "./BackArrow";
 import NextArrow from "./NextArrow";
 import Slide from "./Slide";
-import Calendar from "../../images/calendar.gif";
-import Simon from "../../images/simon.gif";
-import Giphy from "../../images/giphy.gif";
-import Mock from "../../images/mock.gif";
+import Calendar from "../../../images/calendar.gif";
+import Simon from "../../../images/simon.gif";
+import Giphy from "../../../images/giphy.gif";
+import Mock from "../../../images/mock.gif";
 import ProjectData from "../ProjectData/ProjectData.json";
-import "./Carousel.css";
 
 class Carousel extends React.Component {
   constructor(props) {
