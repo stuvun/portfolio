@@ -68,22 +68,28 @@ class App extends Component {
             <Link to="/" className="dev-logo-container">
               <img src={DevLogo} alt="developer-logo" className="dev-logo" />
             </Link>
-            <Link to="/" className="nav-link home-link" title="HOME">
-              HOME
-              <div className="underline" />
-            </Link>
-            <Link
-              to="/projects"
-              className="nav-link projects-link"
-              title="PROJECTS"
-            >
-              PROJECTS
-              <div className="underline" />
-            </Link>
-            <Link to="/resume" className="nav-link resume-link" title="RESUME">
-              RESUME
-              <div className="underline" />
-            </Link>
+            <div className="nav-link-container">
+              <Link to="/" className="nav-link home-link" title="HOME">
+                HOME
+                <div className="underline" />
+              </Link>
+              <Link
+                to="/projects"
+                className="nav-link projects-link"
+                title="PROJECTS"
+              >
+                PROJECTS
+                <div className="underline" />
+              </Link>
+              <Link
+                to="/resume"
+                className="nav-link resume-link"
+                title="RESUME"
+              >
+                RESUME
+                <div className="underline" />
+              </Link>
+            </div>
           </nav>
           <Route path="/" exact component={Home}></Route>
           <Route path="/projects" exact component={Projects}></Route>

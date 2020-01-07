@@ -1,5 +1,6 @@
 .home-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 100%;
@@ -62,23 +63,10 @@
 .skills-container {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   text-align: center;
-  width: 100%;
-  min-width: 400px;
-  max-width: 400px;
-}
-.header-container {
-  width: 100%;
-  height: 4rem;
-  margin: 0;
-  border-top-left-radius: 25px;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.5) 10%,
-    rgba(255, 255, 255, 1) 50%
-  );
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5), 2px 2px 2px rgba(0, 0, 0, 0.4),
-    2px 2px 2px rgba(0, 0, 0, 0.5), 3px 3px 3px rgba(0, 0, 0, 0.4);
+  width: 60%;
+  max-width: 1200px;
 }
 .skills-header {
   font-family: "Montserrat", sans-serif;
@@ -89,14 +77,8 @@
 .figure-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: baseline;
-  border-bottom-left-radius: 25px;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.5) 10%,
-    rgba(255, 255, 255, 1) 50%
-  );
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
   font-size: 1rem;
@@ -107,8 +89,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 125px;
-  height: 125px;
+  width: 113px;
+  height: 100px;
   margin: 0;
   text-align: center;
 }
@@ -123,11 +105,15 @@
   width: 40px;
   height: 40px;
 }
-.mobile {
+.mongodb {
   width: 50px;
   height: 50px;
 }
-@media only screen and (max-width: 1023px) {
+.mobile {
+  width: 45px;
+  height: 45px;
+}
+@media only screen and (max-width: 568px) {
   .about-section {
     display: flex;
     flex-wrap: wrap;
@@ -184,8 +170,7 @@
     align-items: center;
   }
   .skills-container {
-    min-width: 300px;
-    max-width: 300px;
+    width: 70%;
   }
   .profile-figure {
     margin: 0;
@@ -201,7 +186,7 @@
     width: 100%;
   }
 }
-@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+@media only screen and (min-width: 569px) and (max-width: 1200px) {
   .about-summary {
     background: mediumseagreen;
     -webkit-border-radius: 10px;
@@ -213,7 +198,7 @@
     color: white;
     line-height: 1.3;
     margin: 0;
-    max-width: 300px;
+    max-width: 270px;
     padding: 15px;
     position: relative;
   }
@@ -243,8 +228,12 @@
     position: absolute;
     left: 0;
   }
+  .skills-container {
+    width: 80%;
+    max-width: 900px;
+  }
 }
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1201px) {
   .about-summary {
     background: mediumseagreen;
     -webkit-border-radius: 10px;
@@ -285,5 +274,9 @@
     content: "";
     position: absolute;
     left: 0;
+  }
+  .skills-container {
+    width: 80%;
+    max-width: 1200px;
   }
 }

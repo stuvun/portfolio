@@ -53,11 +53,7 @@ const Home = () => {
           </span>
         </div>
       </div>
-
       <div className="skills-container">
-        <div className="header-container">
-          <h1 className="skills-header">SKILLS</h1>
-        </div>
         <div className="figure-container">
           <figure className="figure">
             <JavaScript className="icon javascript" />
