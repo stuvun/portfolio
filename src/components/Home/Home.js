@@ -10,7 +10,7 @@ import { ReactComponent as GitHub } from "../../images/github.svg";
 import { ReactComponent as Postgres } from "../../images/postgres.svg";
 import { ReactComponent as Mongodb } from "../../images/mongodb.svg";
 import { ReactComponent as Bootstrap } from "../../images/bootstrap.svg";
-import { ReactComponent as Mobile } from "../../images/mobile.svg";
+import { ReactComponent as Node } from "../../images/node.svg";
 import { ReactComponent as Agile } from "../../images/agile.svg";
 import "./Home.css";
 
@@ -53,48 +53,50 @@ const Home = () => {
           </span>
         </div>
       </div>
-      <div className="skills-container">
-        <div className="figure-container">
-          <figure className="figure">
-            <JavaScript className="icon javascript" />
-            <figcaption className="caption">JAVASCRIPT</figcaption>
-          </figure>
-          <figure className="figure">
-            <HTML className="icon html" />
-            <figcaption className="caption">HTML</figcaption>
-          </figure>
-          <figure className="figure">
-            <CSS className="icon css" />
-            <figcaption className="caption">CSS</figcaption>
-          </figure>
-          <figure className="figure">
-            <ReactJS className="icon react" />
-            <figcaption className="caption">REACT</figcaption>
-          </figure>
-          <figure className="figure">
-            <Python className="icon python" />
-            <figcaption className="caption">PYTHON</figcaption>
-          </figure>
-          <figure className="figure">
-            <Postgres className="icon postgres" />
-            <figcaption className="caption">POSTGRESQL</figcaption>
-          </figure>
-          <figure className="figure">
-            <Mongodb className="icon mongodb" />
-            <figcaption className="caption">MONGODB</figcaption>
-          </figure>
-          <figure className="figure">
-            <Bootstrap className="icon bootstrap" />
-            <figcaption className="caption">BOOTSTRAP</figcaption>
-          </figure>
-          <figure className="figure">
-            <Mobile className="icon mobile" />
-            <figcaption className="caption">RESPONSIVE DESIGN</figcaption>
-          </figure>
-          <figure className="figure">
-            <Agile className="icon agile" />
-            <figcaption className="caption">AGILE</figcaption>
-          </figure>
+      <div className="skills-wrapper">
+        <div className="skills-container">
+          <div className="figure-container">
+            <figure className="figure">
+              <JavaScript className="icon javascript" />
+              <figcaption className="caption">JAVASCRIPT</figcaption>
+            </figure>
+            <figure className="figure">
+              <HTML className="icon html" />
+              <figcaption className="caption">HTML</figcaption>
+            </figure>
+            <figure className="figure">
+              <CSS className="icon css" />
+              <figcaption className="caption">CSS</figcaption>
+            </figure>
+            <figure className="figure">
+              <Node className="icon node" />
+              <figcaption className="caption">NODE.JS</figcaption>
+            </figure>
+            <figure className="figure">
+              <ReactJS className="icon react" />
+              <figcaption className="caption">REACT</figcaption>
+            </figure>
+            <figure className="figure">
+              <Python className="icon python" />
+              <figcaption className="caption">PYTHON</figcaption>
+            </figure>
+            <figure className="figure">
+              <Postgres className="icon postgres" />
+              <figcaption className="caption">POSTGRESQL</figcaption>
+            </figure>
+            <figure className="figure">
+              <Mongodb className="icon mongodb" />
+              <figcaption className="caption">MONGODB</figcaption>
+            </figure>
+            <figure className="figure">
+              <Bootstrap className="icon bootstrap" />
+              <figcaption className="caption">BOOTSTRAP</figcaption>
+            </figure>
+            <figure className="figure">
+              <Agile className="icon agile" />
+              <figcaption className="caption">AGILE</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </div>

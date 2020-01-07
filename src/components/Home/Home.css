@@ -60,6 +60,12 @@
   text-align: start;
   margin-top: 0px;
 }
+.skills-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: rgba(128, 128, 128, 0.2);
+}
 .skills-container {
   display: flex;
   flex-direction: column;
@@ -171,6 +177,7 @@
   }
   .skills-container {
     width: 70%;
+    min-width: 300px;
   }
   .profile-figure {
     margin: 0;
@@ -230,6 +237,7 @@
   }
   .skills-container {
     width: 80%;
+    min-width: 569px;
     max-width: 900px;
   }
 }
@@ -276,7 +284,7 @@
     left: 0;
   }
   .skills-container {
-    width: 80%;
+    width: 100%;
     max-width: 1200px;
   }
 }
