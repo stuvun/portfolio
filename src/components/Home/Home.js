@@ -12,6 +12,8 @@ import { ReactComponent as Mongodb } from "../../images/mongodb.svg";
 import { ReactComponent as Bootstrap } from "../../images/bootstrap.svg";
 import { ReactComponent as Node } from "../../images/node.svg";
 import { ReactComponent as Agile } from "../../images/agile.svg";
+import { ReactComponent as Illustrator } from "../../images/illustrator.svg";
+import { ReactComponent as Indesign } from "../../images/indesign.svg";
 import "./Home.css";
 
 const Home = () => {
@@ -91,6 +93,14 @@ const Home = () => {
             <figure className="figure">
               <Bootstrap className="icon bootstrap" />
               <figcaption className="caption">BOOTSTRAP</figcaption>
+            </figure>
+            <figure className="figure">
+              <Illustrator className="icon illustrator" />
+              <figcaption className="caption">ILLUSTRATOR</figcaption>
+            </figure>
+            <figure className="figure">
+              <Indesign className="icon indesign" />
+              <figcaption className="caption">INDESIGN</figcaption>
             </figure>
             <figure className="figure">
               <Agile className="icon agile" />

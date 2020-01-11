@@ -73,7 +73,7 @@
   flex-direction: column;
   align-items: flex-start;
   text-align: center;
-  width: 60%;
+  width: 100%;
   max-width: 1200px;
 }
 .skills-header {
@@ -89,7 +89,7 @@
   align-items: baseline;
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
-  font-size: 1rem;
+  font-size: 0.8rem;
   width: 100%;
 }
 .figure {
@@ -98,7 +98,7 @@
   justify-content: center;
   align-items: center;
   width: 113px;
-  height: 100px;
+  height: 75px;
   margin: 0;
   text-align: center;
 }
@@ -119,15 +119,16 @@
   width: 50px;
   height: 50px;
 }
+.agile {
+  width: 40px;
+  height: 40px;
+  padding-bottom: 5px;
+}
 .linkedin:hover {
   fill: #0077b5;
 }
 .github:hover {
   fill: #bd2c00;
-}
-.mobile {
-  width: 45px;
-  height: 45px;
 }
 @media only screen and (max-width: 568px) {
   .about-section {
@@ -186,8 +187,7 @@
     align-items: center;
   }
   .skills-container {
-    width: 70%;
-    min-width: 300px;
+    width: 100%;
   }
   .profile-figure {
     margin: 0;
@@ -246,8 +246,6 @@
     left: 0;
   }
   .skills-container {
-    width: 80%;
-    min-width: 569px;
     max-width: 900px;
   }
 }
@@ -294,7 +292,10 @@
     left: 0;
   }
   .skills-container {
-    width: 100%;
-    max-width: 1200px;
+    max-width: none;
+  }
+  .figure-container {
+    display: flex;
+    flex-wrap: nowrap;
   }
 }
