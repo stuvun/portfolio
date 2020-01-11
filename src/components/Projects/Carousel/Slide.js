@@ -1,6 +1,6 @@
 import React from "react";
-import { ReactComponent as GitHub } from "../../../images/github.svg";
-import { ReactComponent as Internet } from "../../../images/internet.svg";
+import { ReactComponent as GitHub } from "../../../images/links/github.svg";
+import { ReactComponent as Internet } from "../../../images/links/internet.svg";
 
 const Slide = ({
   image,
