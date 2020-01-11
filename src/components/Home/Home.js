@@ -1,5 +1,9 @@
 import React from "react";
 import Profile from "../../images/assets/headshot.jpg";
+import Calendar from "../../images/home-projects/calendar-preview.png";
+import Simon from "../../images/home-projects/simon-preview.png";
+import Giphy from "../../images/home-projects/giphy-preview.png";
+import Mock from "../../images/home-projects/mock-preview.png";
 import { ReactComponent as LinkedIn } from "../../images/links/linkedin.svg";
 import { ReactComponent as GitHub } from "../../images/links/github.svg";
 import { ReactComponent as JavaScript } from "../../images/skills/javascript.svg";
@@ -17,9 +21,33 @@ import { ReactComponent as Indesign } from "../../images/skills/indesign.svg";
 import "./Home.css";
 
 const Home = () => {
+  const styleOne = {
+    backgroundImage: `url(${Calendar})`,
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center center"
+  };
+  const styleTwo = {
+    backgroundImage: `url(${Simon})`,
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center center"
+  };
+  const styleThree = {
+    backgroundImage: `url(${Giphy})`,
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center center"
+  };
+  const styleFour = {
+    backgroundImage: `url(${Mock})`,
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center center"
+  };
   return (
     <div className="home-container">
-      <section id="section1">
+      <section id="section-one">
         <div className="about-section">
           <figure className="profile-figure">
             <img src={Profile} alt="profile" className="profile" />
@@ -111,8 +139,21 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="section2">
-        <div></div>
+      <section id="section-two">
+        <div className="static-wrapper">
+          <div className="static-container">
+            <img className="static" src={Calendar} alt="Calendar App" />
+          </div>
+          <div className="static-container">
+            <img className="static" src={Simon} alt="Simon Game" />
+          </div>
+          <div className="static-container">
+            <img className="static" src={Giphy} alt="Giphy Slider UI" />
+          </div>
+          <div className="static-container">
+            <img className="static" src={Mock} alt="Mock Site" />
+          </div>
+        </div>
       </section>
     </div>
   );

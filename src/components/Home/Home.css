@@ -126,6 +126,17 @@
 .github:hover {
   fill: #bd2c00;
 }
+#section-two {
+  margin: 40px 0;
+}
+.static-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.static {
+  height: 240px;
+}
 @media only screen and (max-width: 568px) {
   .about-section {
     display: flex;
