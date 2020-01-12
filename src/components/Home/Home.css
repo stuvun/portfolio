@@ -144,6 +144,7 @@
 }
 .section-two-header {
   font-size: 2rem;
+  margin: 15px 0 0 0;
 }
 .static-wrapper {
   display: flex;
@@ -151,7 +152,7 @@
   justify-content: space-evenly;
 }
 .static-container {
-  margin: 20px;
+  margin: 3vw 20px;
 }
 .static {
   height: 240px;
@@ -295,5 +296,8 @@
   .figure-container {
     display: flex;
     flex-wrap: nowrap;
+  }
+  .static {
+    height: 14vw;
   }
 }
