@@ -26,6 +26,14 @@ const Home = () => {
     <div className="home-container">
       <section id="section-one">
         <div className="about-section">
+          <div className="about-summary">
+            <div className="speech-arrow"></div>
+            <span className="about-description">
+              Hello! I'm a full-stack developer from Columbia, Maryland who is
+              an active learner and problem solver. My ongoing goal is to never
+              stop improving!
+            </span>
+          </div>
           <figure className="profile-figure">
             <img src={Profile} alt="profile" className="profile" />
             <figcaption className="caption job-title">
@@ -52,14 +60,6 @@ const Home = () => {
               </a>
             </div>
           </figure>
-          <div className="about-summary">
-            <div className="speech-arrow"></div>
-            <span className="about-description">
-              Hello! I'm a full-stack developer from Columbia, Maryland who is
-              an active learner and problem solver. My ongoing goal is to never
-              stop improving!
-            </span>
-          </div>
         </div>
         <div className="skills-wrapper">
           <div className="skills-container">

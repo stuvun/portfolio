@@ -220,7 +220,7 @@ section {
     color: crimson;
   }
 }
-@media only screen and (max-width: 568px) {
+@media only screen and (max-width: 768px) {
   .navbar {
     visibility: hidden;
   }
@@ -228,7 +228,7 @@ section {
     visibility: visible;
   }
 }
-@media only screen and (min-width: 569px) {
+@media only screen and (min-width: 769px) {
   .navbar {
     visibility: visible;
   }

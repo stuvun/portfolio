@@ -21,10 +21,9 @@
 .about-section {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  font-family: "Montserrat", sans-serif;
+  align-items: center;
   font-size: 1.1rem;
   padding: 15px 0;
   white-space: normal;
@@ -32,9 +31,8 @@
 }
 .profile-figure {
   text-align: center;
-  width: 50%;
-  min-width: 250px;
-  max-width: 250px;
+  width: 250px;
+  margin: 0;
 }
 .about-summary {
   position: relative;
@@ -46,7 +44,31 @@
   border-radius: 10px;
   -webkit-box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
   padding: 15px;
+  width: 270px;
+}
+.speech-arrow {
+  border-right: 21px solid transparent;
+  border-top: 20px solid rgba(0, 0, 0, 0.2);
+  bottom: -25px;
+  position: absolute;
+}
+.speech-arrow::before {
+  border-right: 27px solid transparent;
+  border-top: 23px solid rgb(180, 180, 180);
+  bottom: 2px;
+  content: "";
+  position: absolute;
+  left: 2px;
+}
+.speech-arrow::after {
+  border-right: 21px solid transparent;
+  border-top: 21px solid mediumseagreen;
+  bottom: 4px;
+  content: "";
+  position: absolute;
+  left: 0;
 }
 .profile {
   height: 200px;
@@ -57,7 +79,6 @@
   font-weight: 600;
 }
 .job-title {
-  font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
   font-weight: 200;
   margin: 1rem 0;
@@ -80,10 +101,8 @@
   align-items: center;
   text-align: center;
   width: 100%;
-  max-width: 1200px;
 }
 .skills-header {
-  font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-weight: 200;
   padding: 0 0.5rem;
@@ -93,7 +112,6 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
-  font-family: "Montserrat", sans-serif;
   font-weight: 200;
   font-size: 0.8rem;
   width: 100%;
@@ -103,32 +121,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 113px;
+  width: 29vw;
+  max-width: 113px;
   height: 75px;
-  margin: 0;
-  text-align: center;
+  margin: 0 1.5vw;
 }
 .title-icon {
   margin: 0 0.25rem;
-}
-.linkedin {
-  width: 40px;
-  height: 40px;
   transition: 0.2s;
-}
-.github {
-  width: 35px;
-  height: 35px;
-  transition: 0.2s;
-}
-.mongodb {
-  width: 50px;
-  height: 50px;
-}
-.agile {
-  width: 40px;
-  height: 40px;
-  padding-bottom: 5px;
 }
 .linkedin:hover {
   fill: #0077b5;
@@ -136,10 +136,12 @@
 .github:hover {
   fill: #bd2c00;
 }
+.agile {
+  padding-bottom: 5px;
+}
 #section-two {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
 }
 .section-two-header {
@@ -153,60 +155,20 @@
   justify-content: space-evenly;
 }
 .static-container {
-  margin: 3vw 20px;
+  margin: 3vw 0px 1.5vw 0;
 }
 .static {
-  height: 240px;
+  height: 60vw;
 }
-@media only screen and (max-width: 568px) {
-  .about-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 549px;
-    margin-top: 200px;
-  }
-  .about-summary {
-    position: relative;
-    min-width: 270px;
-    max-width: 270px;
-    bottom: 550px;
-    margin-bottom: -550px;
-  }
+@media only screen and (max-width: 768px) {
   .speech-arrow {
-    border-right: 21px solid transparent;
-    border-top: 20px solid rgba(0, 0, 0, 0.2);
-    bottom: -25px;
-    position: absolute;
-    right: 50px;
-  }
-  .speech-arrow::before {
-    border-right: 27px solid transparent;
-    border-top: 23px solid rgb(180, 180, 180);
-    bottom: 2px;
-    content: "";
-    position: absolute;
-    left: 2px;
-  }
-  .speech-arrow::after {
-    border-right: 21px solid transparent;
-    border-top: 21px solid mediumseagreen;
-    bottom: 4px;
-    content: "";
-    position: absolute;
-    left: 0;
+    right: 30px;
   }
   .home-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  .skills-container {
-    width: 100%;
-  }
-  .profile-figure {
-    margin: 0;
   }
   .header-container {
     border-top-right-radius: 25px;
@@ -215,90 +177,64 @@
       0px 2px 1px rgba(0, 0, 0, 0.5), 0px 3px 1px rgba(0, 0, 0, 0.4);
   }
   .figure-container {
-    border-bottom-left-radius: 0;
-    width: 100%;
-    max-width: 550px;
+    max-width: 664px;
+    font-size: 0.75rem;
   }
 }
-@media only screen and (min-width: 569px) and (max-width: 1200px) {
+@media only screen and (min-width: 769px) and (max-width: 1199px) {
   .about-section {
-    max-width: 1200px;
+    display: flex;
+    flex-direction: row-reverse;
   }
   .about-summary {
-    max-width: 270px;
-  }
-  .profile-figure {
-    margin: 100px 0 0 0;
+    bottom: 125px;
   }
   .speech-arrow {
-    border-right: 21px solid transparent;
-    border-top: 20px solid rgba(0, 0, 0, 0.2);
-    bottom: -25px;
-    position: absolute;
-    left: 5px;
+    left: 10px;
   }
-  .speech-arrow::before {
-    border-right: 27px solid transparent;
-    border-top: 23px solid rgb(180, 180, 180);
-    bottom: 2px;
-    content: "";
-    position: absolute;
-    left: 2px;
-  }
-  .speech-arrow::after {
-    border-right: 21px solid transparent;
-    border-top: 21px solid mediumseagreen;
-    bottom: 4px;
-    content: "";
-    position: absolute;
-    left: 0;
+  .profile-figure {
+    margin-top: 100px;
   }
   .skills-container {
-    max-width: 650px;
+    max-width: 955px;
   }
   .figure {
     width: 94px;
+    margin: 0 2.222vw;
+  }
+  .static {
+    height: 29vw;
   }
 }
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1200px) {
+  .about-section {
+    display: flex;
+    flex-direction: row-reverse;
+  }
   .about-summary {
     font-size: 1.5rem;
     width: 550px;
   }
-  .profile-figure {
-    margin: 50px 0 0 0;
+  .about-summary {
+    bottom: 135px;
   }
   .speech-arrow {
-    border-right: 21px solid transparent;
-    border-top: 20px solid rgba(0, 0, 0, 0.2);
-    bottom: -25px;
-    position: absolute;
-    left: 5px;
+    left: 10px;
   }
-  .speech-arrow::before {
-    border-right: 27px solid transparent;
-    border-top: 23px solid rgb(180, 180, 180);
-    bottom: 2px;
-    content: "";
-    position: absolute;
-    left: 0px;
-  }
-  .speech-arrow::after {
-    border-right: 21px solid transparent;
-    border-top: 21px solid mediumseagreen;
-    bottom: 4px;
-    content: "";
-    position: absolute;
-    left: 0;
+  .profile-figure {
+    margin-top: 75px;
   }
   .skills-container {
-    max-width: none;
+    max-width: 1200px;
   }
   .figure-container {
     display: flex;
     flex-wrap: nowrap;
   }
+  .static-container {
+    margin: 30px 0;
+  }
   .static {
-    height: 14vw;
+    height: 15.25vw;
   }
 }
