@@ -18,33 +18,10 @@ import { ReactComponent as Node } from "../../images/skills/node.svg";
 import { ReactComponent as Agile } from "../../images/skills/agile.svg";
 import { ReactComponent as Illustrator } from "../../images/skills/illustrator.svg";
 import { ReactComponent as Indesign } from "../../images/skills/indesign.svg";
+import { ReactComponent as Divider } from "../../images/assets/divider.svg";
 import "./Home.css";
 
 const Home = () => {
-  const styleOne = {
-    backgroundImage: `url(${Calendar})`,
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center center"
-  };
-  const styleTwo = {
-    backgroundImage: `url(${Simon})`,
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center center"
-  };
-  const styleThree = {
-    backgroundImage: `url(${Giphy})`,
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center center"
-  };
-  const styleFour = {
-    backgroundImage: `url(${Mock})`,
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center center"
-  };
   return (
     <div className="home-container">
       <section id="section-one">
@@ -138,8 +115,10 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <Divider className="section-divider" />
       </section>
       <section id="section-two">
+        <h1 className="section-two-header">PROJECTS</h1>
         <div className="static-wrapper">
           <div className="static-container">
             <img className="static" src={Calendar} alt="Calendar App" />

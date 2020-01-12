@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X8 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="200px" height="70px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 200 70"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2750333776544">
+   <polygon class="fil0" points="100,70 0,0 200,0" fill="#00A2FF" fill-opacity="0.08"/>
+   <polygon class="fil1" points="100,56 164,11 36,11" fill="grey" fill-opacity="0.16"/>
+   <polygon class="fil2" points="100,56 123,40 77,40" fill="darkblue" fill-opacity="1.0"/>
+  </g>
+ </g>
+</svg>

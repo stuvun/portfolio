@@ -7,6 +7,17 @@
   user-select: none;
   margin-top: 20px;
 }
+.section-divider {
+  height: auto;
+  min-width: 50px;
+  max-width: 30vw;
+  max-height: 50px;
+}
+#section-one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .about-section {
   width: 100%;
   display: flex;
@@ -62,7 +73,6 @@
   justify-content: center;
   width: 100%;
   background: rgba(0, 162, 255, 0.08);
-  box-shadow: 0px 4px 8px -8px rgba(0, 0, 0, 0.5);
 }
 .skills-container {
   display: flex;
@@ -127,12 +137,21 @@
   fill: #bd2c00;
 }
 #section-two {
-  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.section-two-header {
+  font-size: 2rem;
 }
 .static-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+.static-container {
+  margin: 20px;
 }
 .static {
   height: 240px;
