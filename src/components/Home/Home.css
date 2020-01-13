@@ -170,7 +170,6 @@ h1.section-two-header {
   align-items: center;
   width: 100%;
   opacity: 0;
-  transition: 0.2s ease-in-out;
   z-index: 4;
 }
 .static-link {
@@ -183,19 +182,21 @@ h1.section-two-header {
   border-radius: 2vw;
   padding: 1.5vw 0;
   box-shadow: 0 0.25vw 0.5vw 0 rgba(0, 0, 0, 0.5);
-  transition: 0.2s ease-in-out;
+  transition: 0.2s ease all;
 }
 .static-link a {
   text-decoration: none;
 }
+.static-header {
+  user-select: none;
+}
 .static {
   height: 60vw;
-  transition: 0.2s ease-in-out;
   z-index: 2;
 }
 @media (hover: hover) {
   .static-container:hover .static {
-    opacity: 0.5;
+    opacity: 0.3;
   }
   .static-container:hover .static-overlay {
     opacity: 1;
