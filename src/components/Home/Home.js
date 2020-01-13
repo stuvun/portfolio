@@ -7,8 +7,8 @@ import Mock from "../../images/home-projects/mock-preview.png";
 import { ReactComponent as LinkedIn } from "../../images/links/linkedin.svg";
 import { ReactComponent as GitHub } from "../../images/links/github.svg";
 import { ReactComponent as JavaScript } from "../../images/skills/javascript.svg";
-import { ReactComponent as HTML } from "../../images/skills/html.svg";
-import { ReactComponent as CSS } from "../../images/skills/css.svg";
+import { ReactComponent as Html } from "../../images/skills/html.svg";
+import { ReactComponent as Css } from "../../images/skills/css.svg";
 import { ReactComponent as ReactJS } from "../../images/skills/react.svg";
 import { ReactComponent as Python } from "../../images/skills/python.svg";
 import { ReactComponent as Postgres } from "../../images/skills/postgres.svg";
@@ -22,12 +22,41 @@ import { ReactComponent as Divider } from "../../images/assets/divider.svg";
 import "./Home.css";
 import ProjectData from "../Projects/ProjectData/ProjectData.json";
 import Static from "./Static";
+import Skill from "./Skill";
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      images: [Calendar, Simon, Giphy, Mock]
+      images: [Calendar, Simon, Giphy, Mock],
+      skills: [
+        <JavaScript className="icon javascript" />,
+        <Html className="icon html" />,
+        <Css className="icon css" />,
+        <Node className="icon node" />,
+        <ReactJS className="icon react" />,
+        <Python className="icon python" />,
+        <Postgres className="icon postgres" />,
+        <Mongodb className="icon mongodb" />,
+        <Bootstrap className="icon bootstrap" />,
+        <Illustrator className="icon illustrator" />,
+        <Indesign className="icon indesign" />,
+        <Agile className="icon agile" />
+      ],
+      skillNames: [
+        "JAVASCRIPT",
+        "HTML",
+        "CSS",
+        "NODE.JS",
+        "REACT",
+        "PYTHON",
+        "POSTGRES",
+        "MONGODB",
+        "BOOTSTRAP",
+        "ILLUSTRATOR",
+        "INDESIGN",
+        "AGILE"
+      ]
     };
   }
   render() {
@@ -73,54 +102,13 @@ class Home extends React.Component {
           <div className="skills-wrapper">
             <div className="skills-container">
               <div className="figure-container">
-                <figure className="figure">
-                  <JavaScript className="icon javascript" />
-                  <figcaption className="caption">JAVASCRIPT</figcaption>
-                </figure>
-                <figure className="figure">
-                  <HTML className="icon html" />
-                  <figcaption className="caption">HTML</figcaption>
-                </figure>
-                <figure className="figure">
-                  <CSS className="icon css" />
-                  <figcaption className="caption">CSS</figcaption>
-                </figure>
-                <figure className="figure">
-                  <Node className="icon node" />
-                  <figcaption className="caption">NODE.JS</figcaption>
-                </figure>
-                <figure className="figure">
-                  <ReactJS className="icon react" />
-                  <figcaption className="caption">REACT</figcaption>
-                </figure>
-                <figure className="figure">
-                  <Python className="icon python" />
-                  <figcaption className="caption">PYTHON</figcaption>
-                </figure>
-                <figure className="figure">
-                  <Postgres className="icon postgres" />
-                  <figcaption className="caption">POSTGRESQL</figcaption>
-                </figure>
-                <figure className="figure">
-                  <Mongodb className="icon mongodb" />
-                  <figcaption className="caption">MONGODB</figcaption>
-                </figure>
-                <figure className="figure">
-                  <Bootstrap className="icon bootstrap" />
-                  <figcaption className="caption">BOOTSTRAP</figcaption>
-                </figure>
-                <figure className="figure">
-                  <Illustrator className="icon illustrator" />
-                  <figcaption className="caption">ILLUSTRATOR</figcaption>
-                </figure>
-                <figure className="figure">
-                  <Indesign className="icon indesign" />
-                  <figcaption className="caption">INDESIGN</figcaption>
-                </figure>
-                <figure className="figure">
-                  <Agile className="icon agile" />
-                  <figcaption className="caption">AGILE</figcaption>
-                </figure>
+                {this.state.skills.map((skill, i) => (
+                  <Skill
+                    key={i}
+                    skill={skill}
+                    name={this.state.skillNames[i]}
+                  />
+                ))}
               </div>
             </div>
           </div>
