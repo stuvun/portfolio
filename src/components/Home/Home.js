@@ -20,122 +20,129 @@ import { ReactComponent as Illustrator } from "../../images/skills/illustrator.s
 import { ReactComponent as Indesign } from "../../images/skills/indesign.svg";
 import { ReactComponent as Divider } from "../../images/assets/divider.svg";
 import "./Home.css";
+import ProjectData from "../Projects/ProjectData/ProjectData.json";
+import Static from "./Static";
 
-const Home = () => {
-  return (
-    <div className="home-container">
-      <section id="section-one">
-        <div className="about-section">
-          <div className="about-summary">
-            <div className="speech-arrow"></div>
-            <span className="about-description">
-              Hello! I'm a full-stack developer from Columbia, Maryland who is
-              an active learner and problem solver. My ongoing goal is to never
-              stop improving!
-            </span>
-          </div>
-          <figure className="profile-figure">
-            <img src={Profile} alt="profile" className="profile" />
-            <figcaption className="caption job-title">
-              <span className="dev-name">STEVEN KIM</span>
-              <br />
-              WEB DEVELOPER
-            </figcaption>
-            <div className="icon-container">
-              <a
-                href="https://www.linkedin.com/in/steven-kim-194202197/"
-                rel="noopener noreferrer"
-                target="_blank"
-                className="icon-link"
-              >
-                <LinkedIn className="title-icon linkedin" />
-              </a>
-              <a
-                href="https://github.com/stuvun"
-                rel="noopener noreferrer"
-                target="_blank"
-                className="icon-link"
-              >
-                <GitHub className="title-icon github" />
-              </a>
+class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      images: [Calendar, Simon, Giphy, Mock]
+    };
+  }
+  render() {
+    return (
+      <div className="home-container">
+        <section id="section-one">
+          <div className="about-section">
+            <div className="about-summary">
+              <div className="speech-arrow"></div>
+              <span className="about-description">
+                Hello! I'm a full-stack developer from Columbia, Maryland who is
+                an active learner and problem solver. My ongoing goal is to
+                never stop improving!
+              </span>
             </div>
-          </figure>
-        </div>
-        <div className="skills-wrapper">
-          <div className="skills-container">
-            <div className="figure-container">
-              <figure className="figure">
-                <JavaScript className="icon javascript" />
-                <figcaption className="caption">JAVASCRIPT</figcaption>
-              </figure>
-              <figure className="figure">
-                <HTML className="icon html" />
-                <figcaption className="caption">HTML</figcaption>
-              </figure>
-              <figure className="figure">
-                <CSS className="icon css" />
-                <figcaption className="caption">CSS</figcaption>
-              </figure>
-              <figure className="figure">
-                <Node className="icon node" />
-                <figcaption className="caption">NODE.JS</figcaption>
-              </figure>
-              <figure className="figure">
-                <ReactJS className="icon react" />
-                <figcaption className="caption">REACT</figcaption>
-              </figure>
-              <figure className="figure">
-                <Python className="icon python" />
-                <figcaption className="caption">PYTHON</figcaption>
-              </figure>
-              <figure className="figure">
-                <Postgres className="icon postgres" />
-                <figcaption className="caption">POSTGRESQL</figcaption>
-              </figure>
-              <figure className="figure">
-                <Mongodb className="icon mongodb" />
-                <figcaption className="caption">MONGODB</figcaption>
-              </figure>
-              <figure className="figure">
-                <Bootstrap className="icon bootstrap" />
-                <figcaption className="caption">BOOTSTRAP</figcaption>
-              </figure>
-              <figure className="figure">
-                <Illustrator className="icon illustrator" />
-                <figcaption className="caption">ILLUSTRATOR</figcaption>
-              </figure>
-              <figure className="figure">
-                <Indesign className="icon indesign" />
-                <figcaption className="caption">INDESIGN</figcaption>
-              </figure>
-              <figure className="figure">
-                <Agile className="icon agile" />
-                <figcaption className="caption">AGILE</figcaption>
-              </figure>
+            <figure className="profile-figure">
+              <img src={Profile} alt="profile" className="profile" />
+              <figcaption className="caption job-title">
+                <span className="dev-name">STEVEN KIM</span>
+                <br />
+                WEB DEVELOPER
+              </figcaption>
+              <div className="icon-container">
+                <a
+                  href="https://www.linkedin.com/in/steven-kim-194202197/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="icon-link"
+                >
+                  <LinkedIn className="title-icon linkedin" />
+                </a>
+                <a
+                  href="https://github.com/stuvun"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="icon-link"
+                >
+                  <GitHub className="title-icon github" />
+                </a>
+              </div>
+            </figure>
+          </div>
+          <div className="skills-wrapper">
+            <div className="skills-container">
+              <div className="figure-container">
+                <figure className="figure">
+                  <JavaScript className="icon javascript" />
+                  <figcaption className="caption">JAVASCRIPT</figcaption>
+                </figure>
+                <figure className="figure">
+                  <HTML className="icon html" />
+                  <figcaption className="caption">HTML</figcaption>
+                </figure>
+                <figure className="figure">
+                  <CSS className="icon css" />
+                  <figcaption className="caption">CSS</figcaption>
+                </figure>
+                <figure className="figure">
+                  <Node className="icon node" />
+                  <figcaption className="caption">NODE.JS</figcaption>
+                </figure>
+                <figure className="figure">
+                  <ReactJS className="icon react" />
+                  <figcaption className="caption">REACT</figcaption>
+                </figure>
+                <figure className="figure">
+                  <Python className="icon python" />
+                  <figcaption className="caption">PYTHON</figcaption>
+                </figure>
+                <figure className="figure">
+                  <Postgres className="icon postgres" />
+                  <figcaption className="caption">POSTGRESQL</figcaption>
+                </figure>
+                <figure className="figure">
+                  <Mongodb className="icon mongodb" />
+                  <figcaption className="caption">MONGODB</figcaption>
+                </figure>
+                <figure className="figure">
+                  <Bootstrap className="icon bootstrap" />
+                  <figcaption className="caption">BOOTSTRAP</figcaption>
+                </figure>
+                <figure className="figure">
+                  <Illustrator className="icon illustrator" />
+                  <figcaption className="caption">ILLUSTRATOR</figcaption>
+                </figure>
+                <figure className="figure">
+                  <Indesign className="icon indesign" />
+                  <figcaption className="caption">INDESIGN</figcaption>
+                </figure>
+                <figure className="figure">
+                  <Agile className="icon agile" />
+                  <figcaption className="caption">AGILE</figcaption>
+                </figure>
+              </div>
             </div>
           </div>
-        </div>
-        <Divider className="section-divider" />
-      </section>
-      <section id="section-two">
-        <h1 className="section-two-header">PROJECTS</h1>
-        <div className="static-wrapper">
-          <div className="static-container">
-            <img className="static" src={Calendar} alt="Calendar App" />
+          <Divider className="section-divider" />
+        </section>
+        <section id="section-two">
+          <h1 className="section-two-header">PROJECTS</h1>
+          <div className="static-wrapper">
+            {this.state.images.map((image, i) => (
+              <Static
+                key={i}
+                image={image}
+                name={ProjectData[i].name}
+                deployment={ProjectData[i].deployment}
+                repository={ProjectData[i].repository}
+              />
+            ))}
           </div>
-          <div className="static-container">
-            <img className="static" src={Simon} alt="Simon Game" />
-          </div>
-          <div className="static-container">
-            <img className="static" src={Giphy} alt="Giphy Slider UI" />
-          </div>
-          <div className="static-container">
-            <img className="static" src={Mock} alt="Mock Site" />
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
+        </section>
+      </div>
+    );
+  }
+}
 
 export default Home;

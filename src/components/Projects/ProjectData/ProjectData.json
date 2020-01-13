@@ -14,7 +14,7 @@
     "repository": "https://github.com/stuvun/simon"
   },
   {
-    "name": "GIPHY SLIDER UI",
+    "name": "SLIDER UI",
     "technologies": "JavaScript | HTML | CSS",
     "description": "A 'DHTML' app with the sole purpose of browsing through the current top 100 trending gifs on giphy. The data for these gifs were pulled from giphy's public API endpoint. This was for a project emphasizing UI patterns (this one was a slider).",
     "deployment": "https://stuvun.github.io/giphyslider/",
