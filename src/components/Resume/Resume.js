@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Resume.css";
 import resume from "../../images/assets/resume.png";
-import resumeLink from "../../images/assets/resume.pdf";
+import resumeLink from "../../images/links/resume.pdf";
 import PDF from "../../images/links/pdf.png";
 
 class Resume extends Component {

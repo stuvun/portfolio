@@ -1,9 +1,5 @@
 import React from "react";
-import Profile from "../../images/assets/headshot.jpg";
-import Calendar from "../../images/home-projects/calendar-preview.png";
-import Simon from "../../images/home-projects/simon-preview.png";
-import Giphy from "../../images/home-projects/giphy-preview.png";
-import Mock from "../../images/home-projects/mock-preview.png";
+import { Profile, Calendar, Simon, Giphy, Mock } from "../../images/index";
 import { ReactComponent as LinkedIn } from "../../images/links/linkedin.svg";
 import { ReactComponent as GitHub } from "../../images/links/github.svg";
 import { ReactComponent as JavaScript } from "../../images/skills/javascript.svg";
@@ -20,46 +16,29 @@ import { ReactComponent as Illustrator } from "../../images/skills/illustrator.s
 import { ReactComponent as Indesign } from "../../images/skills/indesign.svg";
 import { ReactComponent as Divider } from "../../images/assets/divider.svg";
 import "./Home.css";
-import ProjectData from "../Projects/ProjectData/ProjectData.json";
+import ProjectData from "../../Data/ProjectData.json";
 import Static from "./Static";
-import Skill from "./Skill";
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      images: [Calendar, Simon, Giphy, Mock],
-      skills: [
-        <JavaScript className="icon javascript" />,
-        <Html className="icon html" />,
-        <Css className="icon css" />,
-        <Node className="icon node" />,
-        <ReactJS className="icon react" />,
-        <Python className="icon python" />,
-        <Postgres className="icon postgres" />,
-        <Mongodb className="icon mongodb" />,
-        <Bootstrap className="icon bootstrap" />,
-        <Illustrator className="icon illustrator" />,
-        <Indesign className="icon indesign" />,
-        <Agile className="icon agile" />
-      ],
-      skillNames: [
-        "JAVASCRIPT",
-        "HTML",
-        "CSS",
-        "NODE.JS",
-        "REACT",
-        "PYTHON",
-        "POSTGRES",
-        "MONGODB",
-        "BOOTSTRAP",
-        "ILLUSTRATOR",
-        "INDESIGN",
-        "AGILE"
-      ]
-    };
+    this.images = [Calendar, Simon, Giphy, Mock];
   }
   render() {
+    const skills = [
+      <JavaScript className="icon javascript" label="JAVASCRIPT" />,
+      <Html className="icon html" label="HTML" />,
+      <Css className="icon css" label="CSS" />,
+      <Node className="icon node" label="NODE.JS" />,
+      <ReactJS className="icon react" label="REACT" />,
+      <Python className="icon python" label="PYTHON" />,
+      <Postgres className="icon postgres" label="POSTGRES" />,
+      <Mongodb className="icon mongodb" label="MONGODB" />,
+      <Bootstrap className="icon bootstrap" label="BOOTSTRAP" />,
+      <Illustrator className="icon illustrator" label="ILLUSTRATOR" />,
+      <Indesign className="icon indesign" label="INDESIGN" />,
+      <Agile className="icon agile" label="AGILE" />
+    ];
     return (
       <div className="home-container">
         <section id="section-one">
@@ -102,12 +81,13 @@ class Home extends React.Component {
           <div className="skills-wrapper">
             <div className="skills-container">
               <div className="figure-container">
-                {this.state.skills.map((skill, i) => (
-                  <Skill
-                    key={i}
-                    skill={skill}
-                    name={this.state.skillNames[i]}
-                  />
+                {skills.map((skill, i) => (
+                  <figure className="figure">
+                    {skill}
+                    <figcaption className="caption">
+                      {skill.props.label}
+                    </figcaption>
+                  </figure>
                 ))}
               </div>
             </div>
@@ -117,7 +97,7 @@ class Home extends React.Component {
         <section id="section-two">
           <h1 className="section-two-header">PROJECTS</h1>
           <div className="static-wrapper">
-            {this.state.images.map((image, i) => (
+            {this.images.map((image, i) => (
               <Static
                 key={i}
                 image={image}

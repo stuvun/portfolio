@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./App.css";
-import DevLogo from "./images/assets/portfolioLogo.png";
+import Logo from "./images/assets/portfolioLogo.png";
 import Home from "./components/Home/Home";
 import Projects from "./components/Projects/Projects";
 import Resume from "./components/Resume/Resume";
@@ -66,7 +66,7 @@ class App extends Component {
           </div>
           <nav className="navbar">
             <Link to="/" className="dev-logo-container">
-              <img src={DevLogo} alt="developer-logo" className="dev-logo" />
+              <img src={Logo} alt="developer-logo" className="dev-logo" />
             </Link>
             <div className="nav-link-container">
               <Link to="/" className="nav-link home-link" title="HOME">
