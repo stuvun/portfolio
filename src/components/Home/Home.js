@@ -25,6 +25,11 @@ class Home extends React.Component {
     this.images = [Calendar, Simon, Giphy, Mock];
   }
   render() {
+    const defaultLinkProps = {
+      rel: "noopener noreferrer",
+      target: "_blank",
+      className: "icon-link"
+    };
     const skills = [
       <JavaScript className="icon javascript" label="JAVASCRIPT" />,
       <Html className="icon html" label="HTML" />,
@@ -61,18 +66,11 @@ class Home extends React.Component {
               <div className="icon-container">
                 <a
                   href="https://www.linkedin.com/in/steven-kim-194202197/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="icon-link"
+                  {...defaultLinkProps}
                 >
                   <LinkedIn className="title-icon linkedin" />
                 </a>
-                <a
-                  href="https://github.com/stuvun"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="icon-link"
-                >
+                <a href="https://github.com/stuvun" {...defaultLinkProps}>
                   <GitHub className="title-icon github" />
                 </a>
               </div>
