@@ -171,6 +171,7 @@ h1.section-two-header {
   width: 100%;
   opacity: 0;
   z-index: 4;
+  transition: opacity 0.2s;
 }
 .static-link {
   width: 35%;
@@ -193,6 +194,7 @@ h1.section-two-header {
 .static {
   height: 60vw;
   z-index: 2;
+  transition: opacity 0.2s;
 }
 @media (hover: hover) {
   .static-container:hover .static {
