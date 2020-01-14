@@ -1,11 +1,7 @@
 export const Logo = require("../images/assets/portfolioLogo.png");
 export const Profile = require("../images/assets/headshot.jpg");
-export const CalendarGif = require("../images/gifs/calendar.gif");
-export const SimonGif = require("../images/gifs/simon.gif");
-export const GiphyGif = require("../images/gifs/giphy.gif");
-export const MockGif = require("../images/gifs/mock.gif");
-export const Calendar = require("../images/home-projects/calendar.gif");
-export const Simon = require("../images/home-projects/simon.gif");
-export const Giphy = require("../images/home-projects/giphy.gif");
-export const Mock = require("../images/home-projects/mock.gif");
+export const Calendar = require("../images/gifs/calendar.gif");
+export const Simon = require("../images/gifs/simon.gif");
+export const Giphy = require("../images/gifs/giphy.gif");
+export const Mock = require("../images/gifs/mock.gif");
 export const PDF = require("../images/links/pdf.png");
