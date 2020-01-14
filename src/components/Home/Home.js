@@ -82,7 +82,7 @@ class Home extends React.Component {
             <div className="skills-container">
               <div className="figure-container">
                 {skills.map((skill, i) => (
-                  <figure className="figure">
+                  <figure className="figure" key={i}>
                     {skill}
                     <figcaption className="caption">
                       {skill.props.label}
