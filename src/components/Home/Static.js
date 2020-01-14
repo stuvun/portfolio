@@ -5,7 +5,7 @@ const Static = ({ image, name, deployment, repository }) => {
     <div className="static-container">
       <div className="static-overlay">
         <a
-          className="static-link"
+          className="static-link static-deployment"
           href={deployment}
           rel="deployment"
           target="__blank noreferrer"
@@ -13,7 +13,7 @@ const Static = ({ image, name, deployment, repository }) => {
           DEPLOYED APP
         </a>
         <a
-          className="static-link"
+          className="static-link static-repository"
           href={repository}
           rel="repository"
           target="__blank noreferrer"
