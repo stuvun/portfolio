@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;
@@ -16,30 +15,38 @@
 }
 .about-section {
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
-  /* padding: 15px 0; */
   white-space: normal;
   color: white;
-  overflow-x: hidden;
-  min-height: 50%;
+  /* overflow-x: hidden; */
 }
 .about-intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgb(0, 11, 70) 0%, rgb(0, 26, 98) 25%);
+  background: linear-gradient(rgb(0, 26, 98) 0%, rgb(0, 5, 36) 90%);
   width: 100%;
   height: 100%;
-  padding: 100px 0;
+  padding: 0;
   z-index: 4;
+}
+.portfolio-logo {
+  margin: 0px 0 15px 0;
+  padding-top: 20px;
+  height: 64px;
+  min-height: 64px;
 }
 .profile-figure {
   text-align: center;
+  margin: 15px;
+}
+div.caption.job-title {
   margin: 0;
 }
 .about-summary {
@@ -93,8 +100,41 @@
 .icon-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100px;
+}
+.view-container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  pointer-events: none;
+}
+.view-more {
+  width: 45px;
+  height: 45px;
+  min-height: 45px;
+  margin: 20px 0 0 0;
+  border: 2px solid goldenrod;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: goldenrod;
+  overflow: hidden;
+  pointer-events: all;
+}
+.down-arrow {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+a.view-container span {
+  margin-bottom: 50px;
+  padding-top: 10px;
+  pointer-events: all;
+  font-size: 0.9rem;
 }
 .skills-wrapper {
   display: flex;
@@ -230,6 +270,16 @@ h1.section-two-header {
   pointer-events: all;
 }
 @media (hover: hover) {
+  a.view-container:hover div.down-arrow {
+    transform: translateY(0);
+  }
+  a.view-container:hover .underline {
+    width: 100%;
+    transition: 0.2s ease;
+  }
+  a.view-container:hover span {
+    color: goldenrod;
+  }
   .static-container:hover .static {
     opacity: 0.3;
   }
@@ -248,18 +298,6 @@ h1.section-two-header {
 @media only screen and (max-width: 768px) {
   .speech-arrow {
     right: 30px;
-  }
-  .home-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .header-container {
-    border-top-right-radius: 25px;
-    width: 100%;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 2px 1px rgba(0, 0, 0, 0.4),
-      0px 2px 1px rgba(0, 0, 0, 0.5), 0px 3px 1px rgba(0, 0, 0, 0.4);
   }
   .figure-container {
     max-width: 664px;

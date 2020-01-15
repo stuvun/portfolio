@@ -1,5 +1,6 @@
 import React from "react";
 import { Calendar, Simon, Giphy, Mock } from "../../images/index";
+import { ReactComponent as Logo } from "../../images/assets/portfolio-logo.svg";
 import { ReactComponent as LinkedIn } from "../../images/links/linkedin.svg";
 import { ReactComponent as GitHub } from "../../images/links/github.svg";
 import { ReactComponent as JavaScript } from "../../images/skills/javascript.svg";
@@ -49,32 +50,43 @@ class Home extends React.Component {
         <section id="section-one">
           <div className="about-section">
             <div className="about-intro">
+              <Logo className="portfolio-logo" />
               <div className="about-summary">
                 <div className="speech-arrow"></div>
                 <span className="about-description">
-                  Hello! I'm a full-stack developer from Columbia, Maryland who
-                  is an active learner and problem solver. My ongoing goal is to
-                  never stop improving!
+                  Hello! I'm a full-stack software engineer from Columbia,
+                  Maryland. I'm an active learner and problem solver who's never
+                  afraid of new challenges!
                 </span>
               </div>
-              <figure className="profile-figure">
-                <figcaption className="caption job-title">
+              <div className="profile-figure">
+                <div className="caption job-title">
                   <span className="dev-name">STEVEN KIM</span>
                   <br />
                   WEB DEVELOPER
-                </figcaption>
-                <div className="icon-container">
-                  <a
-                    href="https://www.linkedin.com/in/steven-kim-194202197/"
-                    {...defaultLinkProps}
-                  >
-                    <LinkedIn className="title-icon linkedin" />
-                  </a>
-                  <a href="https://github.com/stuvun" {...defaultLinkProps}>
-                    <GitHub className="title-icon github" />
-                  </a>
                 </div>
-              </figure>
+              </div>
+              {/* <div className="icon-container">
+                <a
+                  href="https://www.linkedin.com/in/steven-kim-194202197/"
+                  {...defaultLinkProps}
+                >
+                  <LinkedIn className="title-icon linkedin" />
+                </a>
+                <a href="https://github.com/stuvun" {...defaultLinkProps}>
+                  <GitHub className="title-icon github" />
+                </a>
+              </div> */}
+              <a className="view-container" href="#section-two">
+                <div className="view-more">
+                  <div className="down-arrow down-arrow-top">&#8681;</div>
+                  <div className="down-arrow down-arrow-bottom">&#8681;</div>
+                </div>
+                <span>
+                  View Portfolio
+                  <div className="underline" />
+                </span>
+              </a>
             </div>
             <div className="navbar-container">
               <nav className="navbar">
