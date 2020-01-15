@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Logo from "./images/assets/portfolio-logo.svg";
 import Home from "./components/Home/Home";
-import Projects from "./components/Projects/Projects";
-import Resume from "./components/Resume/Resume";
 
 class App extends Component {
   constructor(props) {

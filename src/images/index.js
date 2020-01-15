@@ -5,3 +5,4 @@ export const Simon = require("../images/gifs/simon.gif");
 export const Giphy = require("../images/gifs/giphy.gif");
 export const Mock = require("../images/gifs/mock.gif");
 export const PDF = require("../images/links/pdf.png");
+export const Email = require("../images/links/email.svg");

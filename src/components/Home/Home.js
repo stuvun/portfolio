@@ -1,5 +1,13 @@
 import React from "react";
-import { Calendar, Simon, Giphy, Mock } from "../../images/index";
+import {
+  Calendar,
+  Simon,
+  Giphy,
+  Mock,
+  Profile,
+  Email,
+  PDF
+} from "../../images/index";
 import { ReactComponent as Logo } from "../../images/assets/portfolio-logo.svg";
 import { ReactComponent as LinkedIn } from "../../images/links/linkedin.svg";
 import { ReactComponent as GitHub } from "../../images/links/github.svg";
@@ -16,6 +24,8 @@ import { ReactComponent as Agile } from "../../images/skills/agile.svg";
 import { ReactComponent as Illustrator } from "../../images/skills/illustrator.svg";
 import { ReactComponent as Indesign } from "../../images/skills/indesign.svg";
 import { ReactComponent as Divider } from "../../images/assets/divider.svg";
+import { ReactComponent as DividerTwo } from "../../images/assets/divider-two.svg";
+import Resume from "../../images/links/resume.pdf";
 import "./Home.css";
 import ProjectData from "../../Data/ProjectData.json";
 import Static from "./Static";
@@ -66,17 +76,6 @@ class Home extends React.Component {
                   WEB DEVELOPER
                 </div>
               </div>
-              {/* <div className="icon-container">
-                <a
-                  href="https://www.linkedin.com/in/steven-kim-194202197/"
-                  {...defaultLinkProps}
-                >
-                  <LinkedIn className="title-icon linkedin" />
-                </a>
-                <a href="https://github.com/stuvun" {...defaultLinkProps}>
-                  <GitHub className="title-icon github" />
-                </a>
-              </div> */}
               <a className="view-container" href="#section-two">
                 <div className="view-more">
                   <div className="down-arrow down-arrow-top">&#8681;</div>
@@ -91,26 +90,20 @@ class Home extends React.Component {
             <div className="navbar-container">
               <nav className="navbar">
                 <div className="nav-link-container">
-                  <a className="nav-link home-link" href="#section-one">
+                  <a className="nav-link" href="#section-one">
                     Home
                     <div className="underline" />
                   </a>
                 </div>
                 <div className="nav-link-container">
-                  <a className="nav-link home-link" href="#section-two">
-                    About
-                    <div className="underline" />
-                  </a>
-                </div>
-                <div className="nav-link-container">
-                  <a className="nav-link home-link" href="#section-three">
+                  <a className="nav-link" href="#section-two">
                     Projects
                     <div className="underline" />
                   </a>
                 </div>
                 <div className="nav-link-container">
-                  <a className="nav-link home-link" href="#section-four">
-                    Contact
+                  <a className="nav-link" href="#section-three">
+                    About
                     <div className="underline" />
                   </a>
                 </div>
@@ -120,26 +113,20 @@ class Home extends React.Component {
             <div className="scrollnav-container">
               <nav className="navbar">
                 <div className="nav-link-container">
-                  <a className="nav-link home-link" href="#section-one">
+                  <a className="nav-link" href="#section-one">
                     Home
                     <div className="underline" />
                   </a>
                 </div>
                 <div className="nav-link-container">
-                  <a className="nav-link home-link" href="#section-two">
-                    About
-                    <div className="underline" />
-                  </a>
-                </div>
-                <div className="nav-link-container">
-                  <a className="nav-link home-link" href="#section-three">
+                  <a className="nav-link" href="#section-two">
                     Projects
                     <div className="underline" />
                   </a>
                 </div>
                 <div className="nav-link-container">
-                  <a className="nav-link home-link" href="#section-four">
-                    Contact
+                  <a className="nav-link" href="#section-three">
+                    About
                     <div className="underline" />
                   </a>
                 </div>
@@ -147,23 +134,25 @@ class Home extends React.Component {
               <div className="navbar-shadow" />
             </div>
           </div>
-          <div className="skills-wrapper">
-            <div className="skills-container">
-              <div className="figure-container">
-                {skills.map((skill, i) => (
-                  <figure className="figure" key={i}>
-                    {skill}
-                    <figcaption className="caption">
-                      {skill.props.label}
-                    </figcaption>
-                  </figure>
-                ))}
-              </div>
-            </div>
-          </div>
         </section>
         <section id="section-two">
-          <Divider className="section-divider" />
+          <div className="skill-divider">
+            <div className="skills-wrapper">
+              <div className="skills-container">
+                <div className="figure-container">
+                  {skills.map((skill, i) => (
+                    <figure className="figure" key={i}>
+                      {skill}
+                      <figcaption className="caption">
+                        {skill.props.label}
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <Divider className="section-divider" />
+          </div>
           <h1 className="section-two-header">PROJECTS</h1>
           <div className="static-wrapper">
             {this.images.map((image, i) => (
@@ -178,29 +167,38 @@ class Home extends React.Component {
           </div>
         </section>
         <section id="section-three">
-          <div className="static-wrapper">
-            {this.images.map((image, i) => (
-              <Static
-                key={i}
-                image={image}
-                name={ProjectData[i].name}
-                deployment={ProjectData[i].deployment}
-                repository={ProjectData[i].repository}
-              />
-            ))}
-          </div>
-        </section>
-        <section id="section-four">
-          <div className="static-wrapper">
-            {this.images.map((image, i) => (
-              <Static
-                key={i}
-                image={image}
-                name={ProjectData[i].name}
-                deployment={ProjectData[i].deployment}
-                repository={ProjectData[i].repository}
-              />
-            ))}
+          <DividerTwo className="section-divider" />
+          <div className="profile-container">
+            <div className="icon-container">
+              <a
+                href="https://www.linkedin.com/in/steven-kim-194202197/"
+                {...defaultLinkProps}
+              >
+                <LinkedIn className="title-icon linkedin" />
+              </a>
+              <a href="https://github.com/stuvun" {...defaultLinkProps}>
+                <GitHub className="title-icon github" />
+              </a>
+            </div>
+            <a href={Resume} {...defaultLinkProps} className="resume-container">
+              <img src={PDF} alt="resume-pdf" className="resume-pdf" />
+              <span>
+                View Resume
+                <div className="underline" />
+              </span>
+            </a>
+            <img src={Profile} alt="profile" className="profile" />
+            <a
+              href="sskim14@gmail.com"
+              {...defaultLinkProps}
+              className="contact-container"
+            >
+              <img src={Email} alt="email" className="email" />
+              <span>
+                sskim14@gmail.com
+                <div className="underline" />
+              </span>
+            </a>
           </div>
         </section>
       </div>
