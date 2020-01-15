@@ -1,5 +1,5 @@
 import React from "react";
-import { Profile, Calendar, Simon, Giphy, Mock } from "../../images/index";
+import { Calendar, Simon, Giphy, Mock } from "../../images/index";
 import { ReactComponent as LinkedIn } from "../../images/links/linkedin.svg";
 import { ReactComponent as GitHub } from "../../images/links/github.svg";
 import { ReactComponent as JavaScript } from "../../images/skills/javascript.svg";
@@ -48,33 +48,92 @@ class Home extends React.Component {
       <div className="home-container">
         <section id="section-one">
           <div className="about-section">
-            <div className="about-summary">
-              <div className="speech-arrow"></div>
-              <span className="about-description">
-                Hello! I'm a full-stack developer from Columbia, Maryland who is
-                an active learner and problem solver. My ongoing goal is to
-                never stop improving!
-              </span>
-            </div>
-            <figure className="profile-figure">
-              <img src={Profile} alt="profile" className="profile" />
-              <figcaption className="caption job-title">
-                <span className="dev-name">STEVEN KIM</span>
-                <br />
-                WEB DEVELOPER
-              </figcaption>
-              <div className="icon-container">
-                <a
-                  href="https://www.linkedin.com/in/steven-kim-194202197/"
-                  {...defaultLinkProps}
-                >
-                  <LinkedIn className="title-icon linkedin" />
-                </a>
-                <a href="https://github.com/stuvun" {...defaultLinkProps}>
-                  <GitHub className="title-icon github" />
-                </a>
+            <div className="about-intro">
+              <div className="about-summary">
+                <div className="speech-arrow"></div>
+                <span className="about-description">
+                  Hello! I'm a full-stack developer from Columbia, Maryland who
+                  is an active learner and problem solver. My ongoing goal is to
+                  never stop improving!
+                </span>
               </div>
-            </figure>
+              <figure className="profile-figure">
+                <figcaption className="caption job-title">
+                  <span className="dev-name">STEVEN KIM</span>
+                  <br />
+                  WEB DEVELOPER
+                </figcaption>
+                <div className="icon-container">
+                  <a
+                    href="https://www.linkedin.com/in/steven-kim-194202197/"
+                    {...defaultLinkProps}
+                  >
+                    <LinkedIn className="title-icon linkedin" />
+                  </a>
+                  <a href="https://github.com/stuvun" {...defaultLinkProps}>
+                    <GitHub className="title-icon github" />
+                  </a>
+                </div>
+              </figure>
+            </div>
+            <div className="navbar-container">
+              <nav className="navbar">
+                <div className="nav-link-container">
+                  <a className="nav-link home-link" href="#section-one">
+                    Home
+                    <div className="underline" />
+                  </a>
+                </div>
+                <div className="nav-link-container">
+                  <a className="nav-link home-link" href="#section-two">
+                    About
+                    <div className="underline" />
+                  </a>
+                </div>
+                <div className="nav-link-container">
+                  <a className="nav-link home-link" href="#section-three">
+                    Projects
+                    <div className="underline" />
+                  </a>
+                </div>
+                <div className="nav-link-container">
+                  <a className="nav-link home-link" href="#section-four">
+                    Contact
+                    <div className="underline" />
+                  </a>
+                </div>
+              </nav>
+              <div className="navbar-shadow" />
+            </div>
+            <div className="scrollnav-container">
+              <nav className="navbar">
+                <div className="nav-link-container">
+                  <a className="nav-link home-link" href="#section-one">
+                    Home
+                    <div className="underline" />
+                  </a>
+                </div>
+                <div className="nav-link-container">
+                  <a className="nav-link home-link" href="#section-two">
+                    About
+                    <div className="underline" />
+                  </a>
+                </div>
+                <div className="nav-link-container">
+                  <a className="nav-link home-link" href="#section-three">
+                    Projects
+                    <div className="underline" />
+                  </a>
+                </div>
+                <div className="nav-link-container">
+                  <a className="nav-link home-link" href="#section-four">
+                    Contact
+                    <div className="underline" />
+                  </a>
+                </div>
+              </nav>
+              <div className="navbar-shadow" />
+            </div>
           </div>
           <div className="skills-wrapper">
             <div className="skills-container">
@@ -90,10 +149,36 @@ class Home extends React.Component {
               </div>
             </div>
           </div>
-          <Divider className="section-divider" />
         </section>
         <section id="section-two">
+          <Divider className="section-divider" />
           <h1 className="section-two-header">PROJECTS</h1>
+          <div className="static-wrapper">
+            {this.images.map((image, i) => (
+              <Static
+                key={i}
+                image={image}
+                name={ProjectData[i].name}
+                deployment={ProjectData[i].deployment}
+                repository={ProjectData[i].repository}
+              />
+            ))}
+          </div>
+        </section>
+        <section id="section-three">
+          <div className="static-wrapper">
+            {this.images.map((image, i) => (
+              <Static
+                key={i}
+                image={image}
+                name={ProjectData[i].name}
+                deployment={ProjectData[i].deployment}
+                repository={ProjectData[i].repository}
+              />
+            ))}
+          </div>
+        </section>
+        <section id="section-four">
           <div className="static-wrapper">
             {this.images.map((image, i) => (
               <Static

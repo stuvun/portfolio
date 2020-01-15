@@ -7,7 +7,7 @@ viewBox="0 0 200 70"
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
   <g id="_2137190245648">
-   <polygon class="fil0" points="100,70 0,0 200,0 " fill="#00A2FF" fill-opacity="0.08"/>
+   <polygon class="fil0" points="100,70 0,0 200,0 " fill="white" fill-opacity="1"/>
    <path class="fil1" d="M116 45l16 -11 -64 0 16 11 32 0zm20 -14l15 -11 -102 0 15 11 72 0zm19 -14l9 -6 -128 0 9 6 110 0z" fill="grey" fill-opacity="0.08"/>
    <polygon class="fil2" points="100,56 112,48 88,48 " fill="darkblue" fill-opacity="0.7"/>
   </g>
