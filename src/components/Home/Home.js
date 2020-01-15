@@ -162,6 +162,7 @@ class Home extends React.Component {
                 name={ProjectData[i].name}
                 deployment={ProjectData[i].deployment}
                 repository={ProjectData[i].repository}
+                technologies={ProjectData[i].technologies}
               />
             ))}
           </div>

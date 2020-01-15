@@ -1,9 +1,10 @@
 import React from "react";
 
-const Static = ({ image, name, deployment, repository }) => {
+const Static = ({ image, name, deployment, repository, technologies }) => {
   return (
     <div className="static-container">
       <div className="static-overlay">
+        <span className="technologies">{technologies}</span>
         <a
           className="static-link static-deployment"
           href={deployment}

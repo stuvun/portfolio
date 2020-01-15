@@ -1,7 +1,7 @@
 [
   {
     "name": "Calendar App",
-    "technologies": "MongoDB | ExpressJS | ReactJS | NodeJS | Storybook",
+    "technologies": "MongoDB | ExpressJS | ReactJS | NodeJS",
     "description": "A full 'MERN-Stack' application created by a team of three. We used a formula for each year to properly align days and weeks no matter how far back or forward you go. We added 'CRUD' functionality to be made available to anyone who visits the deployed website for adding, editing, or deleting birthdays. Once you enter your birthday, that record will appear for each year on the correct day of the week!",
     "deployment": "https://calanderproject.netlify.com/",
     "repository": "https://github.com/stuvun/calendarprojectMERN"

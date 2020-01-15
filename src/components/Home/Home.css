@@ -311,6 +311,15 @@ h1.section-two-header {
   height: 30px;
   margin: 0 10px;
 }
+.technologies {
+  background: rgb(0, 0, 75);
+  color: white;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  transform: translateY(-200%);
+  transition: transform 0.3s ease;
+}
 @media (hover: hover) {
   a.view-container:hover div.down-arrow {
     transform: translateY(0);
@@ -345,6 +354,9 @@ h1.section-two-header {
   .static-container:hover .static-deployment,
   .static-container:hover .static-repository {
     transform: translateX(0);
+  }
+  .static-container:hover .technologies {
+    transform: translateY(0);
   }
   .static-link:hover {
     background: rgb(0, 0, 75);
