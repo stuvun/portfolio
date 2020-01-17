@@ -38,6 +38,7 @@ const SectionTwo = () => {
     Illustrator,
     Indesign
   ];
+  console.log(JSON.stringify(SkillData[1].image));
   return (
     <section id="section-two">
       <div className="navbar-container">
@@ -68,9 +69,9 @@ const SectionTwo = () => {
           <div className="skills-container">
             <div className="figure-container">
               {SkillData.map((skill, i) => (
-                <figure className="figure" key={i}>
+                <figure className="figure" key={i} image={skill.image}>
                   <img
-                    src={skills[i]}
+                    src={require(`../../images/skills/${skill.title}.svg`)}
                     alt={skill.name}
                     className={skill.class}
                   />
