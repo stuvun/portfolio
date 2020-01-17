@@ -1,7 +1,6 @@
 import React from "react";
 import ProjectData from "../../Data/ProjectData.json";
 import SkillData from "../../Data/SkillData.json";
-import Static from "./Static";
 import { ReactComponent as Divider } from "../../images/assets/divider.svg";
 
 const SectionTwo = () => {
@@ -52,14 +51,35 @@ const SectionTwo = () => {
       <h1 className="section-two-header">PROJECTS</h1>
       <div className="static-wrapper">
         {ProjectData.map((project, i) => (
-          <Static
-            key={i}
-            image={require(`../../images/gifs/${project.title}.gif`)}
-            name={project.name}
-            deployment={project.deployment}
-            repository={project.repository}
-            technologies={project.technologies}
-          />
+          <div className="static-container">
+            <div className="static-overlay">
+              <span className="technologies">{project.technologies}</span>
+              <a
+                className="static-link static-deployment"
+                href={project.deployment}
+                rel="deployment"
+                target="__blank noreferrer"
+              >
+                DEPLOYED APP
+              </a>
+              <a
+                className="static-link static-repository"
+                href={project.repository}
+                rel="repository"
+                target="__blank noreferrer"
+              >
+                REPOSITORY
+              </a>
+            </div>
+            <div className="static-holder">
+              <span className="static-header">{project.name}</span>
+              <img
+                className="static"
+                src={require(`../../images/gifs/${project.title}.gif`)}
+                alt="Calendar App"
+              />
+            </div>
+          </div>
         ))}
       </div>
     </section>
