@@ -16,6 +16,9 @@
   flex-direction: column;
   align-items: center;
 }
+#section-one {
+  margin-bottom: -44px;
+}
 .about-section {
   width: 100%;
   height: 100vh;
@@ -143,7 +146,6 @@ a.view-container span {
 }
 .skills-wrapper {
   display: flex;
-  justify-content: center;
   width: 100vw;
   background: white;
 }
@@ -154,15 +156,10 @@ a.view-container span {
   text-align: center;
   width: 100%;
 }
-.skills-header {
-  font-size: 1.5rem;
-  font-weight: 200;
-  padding: 0 0.5rem;
-}
 .figure-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: baseline;
   font-weight: 200;
   font-size: 0.8rem;
@@ -174,6 +171,7 @@ a.view-container span {
   justify-content: center;
   align-items: center;
   width: 29vw;
+  min-width: 0px;
   max-width: 113px;
   height: 75px;
   margin: 0 1.5vw;
