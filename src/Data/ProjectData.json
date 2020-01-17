@@ -1,30 +1,38 @@
 [
   {
     "name": "Calendar App",
+    "title": "calendar",
     "technologies": "MongoDB | ExpressJS | ReactJS | NodeJS",
     "description": "A full 'MERN-Stack' application created by a team of three. We used a formula for each year to properly align days and weeks no matter how far back or forward you go. We added 'CRUD' functionality to be made available to anyone who visits the deployed website for adding, editing, or deleting birthdays. Once you enter your birthday, that record will appear for each year on the correct day of the week!",
     "deployment": "https://calanderproject.netlify.com/",
-    "repository": "https://github.com/stuvun/calendarprojectMERN"
+    "repository": "https://github.com/stuvun/calendarprojectMERN",
+    "image": "../../images/gifs/calendar.gif"
   },
   {
     "name": "Simon",
+    "title": "simon",
     "technologies": "JavaScript | HTML | CSS",
     "description": "A memory game based on the physical electronic game, 'Simon', by Hasbro. that was created using 'Dynamic HTML' (DHTML). Once you begin the game, a random sequence of buttons will light up for you to mimic in that same order. Each round adds one additional button for you to press as you progress (starting at one).",
     "deployment": "https://stuvun.github.io/simon/",
-    "repository": "https://github.com/stuvun/simon"
+    "repository": "https://github.com/stuvun/simon",
+    "image": "../../images/gifs/simon.gif"
   },
   {
     "name": "Slider UI",
+    "title": "giphy",
     "technologies": "JavaScript | HTML | CSS",
     "description": "A 'DHTML' app with the sole purpose of browsing through the current top 100 trending gifs on giphy. The data for these gifs were pulled from giphy's public API endpoint. This was for a project emphasizing UI patterns (this one was a slider).",
     "deployment": "https://stuvun.github.io/giphyslider/",
-    "repository": "https://github.com/stuvun/giphyslider"
+    "repository": "https://github.com/stuvun/giphyslider",
+    "image": "../../images/gifs/giphy.gif"
   },
   {
     "name": "Mock Site",
+    "title": "mock",
     "technologies": "HTML | CSS",
     "description": "First project at General Assembly's (D.C.) bootcamp which had us replicate a mock website that we picked out from open sources (this mock was chosen from www.dribbble.com). This project utilized everything we learned during our first week of the course.",
     "deployment": "https://stuvun.github.io/mocksite/",
-    "repository": "https://github.com/stuvun/mocksite"
+    "repository": "https://github.com/stuvun/mocksite",
+    "image": "../../images/gifs/mock.gif"
   }
 ]

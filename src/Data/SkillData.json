@@ -3,84 +3,72 @@
     "class": "icon javascript",
     "title": "javascript",
     "name": "JavaScript",
-    "label": "JAVASCRIPT",
-    "image": "../../images/skills/javascript.svg"
+    "label": "JAVASCRIPT"
   },
   {
     "class": "icon css",
     "title": "css",
     "name": "CSS",
-    "label": "CSS",
-    "image": "../../images/skills/css.svg"
+    "label": "CSS"
   },
   {
     "class": "icon html",
     "title": "html",
     "name": "HTML",
-    "label": "HTML",
-    "image": "../../images/skills/html.svg"
+    "label": "HTML"
   },
   {
     "class": "icon react",
     "title": "react",
     "name": "React",
-    "label": "REACT",
-    "image": "../../images/skills/react.svg"
+    "label": "REACT"
   },
   {
     "class": "icon python",
     "title": "python",
     "name": "Python",
-    "label": "PYTHON",
-    "image": "../../images/skills/python.svg"
+    "label": "PYTHON"
   },
   {
     "class": "icon node",
     "title": "node",
     "name": "NodeJS",
-    "label": "NODE.JS",
-    "image": "../../images/skills/node.svg"
+    "label": "NODE.JS"
   },
   {
     "class": "icon postgres",
     "title": "postgres",
     "name": "Postgres",
-    "label": "POSTGRES",
-    "image": "../../images/skills/postgres.svg"
+    "label": "POSTGRES"
   },
   {
     "class": "icon mongodb",
     "title": "mongodb",
     "name": "MongoDB",
-    "label": "MONGODB",
-    "image": "../../images/skills/mongodb.svg"
+    "label": "MONGODB"
   },
   {
     "class": "icon bootstrap",
     "title": "bootstrap",
     "name": "Bootstrap",
-    "label": "BOOTSTRAP",
-    "image": "../../images/skills/bootstrap.svg"
+    "label": "BOOTSTRAP"
   },
   {
     "class": "icon agile",
     "title": "agile",
     "name": "Agile",
-    "label": "AGILE",
-    "image": "../../images/skills/agile.svg"
+    "label": "AGILE"
   },
   {
     "class": "icon illustrator",
     "title": "illustrator",
     "name": "Illustrator",
-    "label": "ILLUSTRATOR",
-    "image": "../../images/skills/illustrator.svg"
+    "label": "ILLUSTRATOR"
   },
   {
     "class": "icon indesign",
     "title": "indesign",
     "name": "Indesign",
-    "label": "INDESIGN",
-    "image": "../../images/skills/indesign.svg"
+    "label": "INDESIGN"
   }
 ]
