@@ -1,0 +1,74 @@
+[
+  {
+    "class": "icon javascript",
+    "name": "JavaScript",
+    "label": "JAVASCRIPT",
+    "image": "../images/skills/javascript.svg"
+  },
+  {
+    "class": "icon css",
+    "name": "CSS",
+    "label": "CSS",
+    "image": "../images/skills/css.svg"
+  },
+  {
+    "class": "icon html",
+    "name": "HTML",
+    "label": "HTML",
+    "image": "../images/skills/html.svg"
+  },
+  {
+    "class": "icon react",
+    "name": "React",
+    "label": "REACT",
+    "image": "../images/skills/react.svg"
+  },
+  {
+    "class": "icon python",
+    "name": "Python",
+    "label": "PYTHON",
+    "image": "../images/skills/python.svg"
+  },
+  {
+    "class": "icon postgres",
+    "name": "Postgres",
+    "label": "POSTGRES",
+    "image": "../images/skills/postgres.svg"
+  },
+  {
+    "class": "icon mongodb",
+    "name": "MongoDB",
+    "label": "MONGODB",
+    "image": "../images/skills/mongodb.svg"
+  },
+  {
+    "class": "icon bootstrap",
+    "name": "Bootstrap",
+    "label": "BOOTSTRAP",
+    "image": "../images/skills/bootstrap.svg"
+  },
+  {
+    "class": "icon node",
+    "name": "NodeJS",
+    "label": "NODE.JS",
+    "image": "../images/skills/node.svg"
+  },
+  {
+    "class": "icon agile",
+    "name": "Agile",
+    "label": "AGILE",
+    "image": "../images/skills/agile.svg"
+  },
+  {
+    "class": "icon illustrator",
+    "name": "Illustrator",
+    "label": "ILLUSTRATOR",
+    "image": "../images/skills/illustrator.svg"
+  },
+  {
+    "class": "icon indesign",
+    "name": "Indesign",
+    "label": "INDESIGN",
+    "image": "../images/skills/indesign.svg"
+  }
+]

@@ -1,40 +1,16 @@
 import React from "react";
-import {
-  Calendar,
-  Simon,
-  Giphy,
-  Mock,
-  Profile,
-  Email,
-  PDF
-} from "../../images/index";
-import { ReactComponent as Logo } from "../../images/assets/portfolio-logo.svg";
+import { Profile, Email, PDF } from "../../images/index";
 import { ReactComponent as LinkedIn } from "../../images/links/linkedin.svg";
 import { ReactComponent as GitHub } from "../../images/links/github.svg";
-import { ReactComponent as JavaScript } from "../../images/skills/javascript.svg";
-import { ReactComponent as Html } from "../../images/skills/html.svg";
-import { ReactComponent as Css } from "../../images/skills/css.svg";
-import { ReactComponent as ReactJS } from "../../images/skills/react.svg";
-import { ReactComponent as Python } from "../../images/skills/python.svg";
-import { ReactComponent as Postgres } from "../../images/skills/postgres.svg";
-import { ReactComponent as Mongodb } from "../../images/skills/mongodb.svg";
-import { ReactComponent as Bootstrap } from "../../images/skills/bootstrap.svg";
-import { ReactComponent as Node } from "../../images/skills/node.svg";
-import { ReactComponent as Agile } from "../../images/skills/agile.svg";
-import { ReactComponent as Illustrator } from "../../images/skills/illustrator.svg";
-import { ReactComponent as Indesign } from "../../images/skills/indesign.svg";
-import { ReactComponent as Divider } from "../../images/assets/divider.svg";
-import { ReactComponent as DividerTwo } from "../../images/assets/divider-two.svg";
 import Resume from "../../images/links/resume.pdf";
 import "./Home.css";
-import ProjectData from "../../Data/ProjectData.json";
-import Static from "./Static";
 import SectionOne from "./SectionOne";
+import SectionTwo from "./SectionTwo";
+import { ReactComponent as DividerTwo } from "../../images/assets/divider-two.svg";
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.images = [Calendar, Simon, Giphy, Mock];
   }
   render() {
     const defaultLinkProps = {
@@ -42,78 +18,10 @@ class Home extends React.Component {
       target: "_blank",
       className: "icon-link"
     };
-    const skills = [
-      <JavaScript className="icon javascript" label="JAVASCRIPT" />,
-      <Html className="icon html" label="HTML" />,
-      <Css className="icon css" label="CSS" />,
-      <Node className="icon node" label="NODE.JS" />,
-      <ReactJS className="icon react" label="REACT" />,
-      <Python className="icon python" label="PYTHON" />,
-      <Postgres className="icon postgres" label="POSTGRES" />,
-      <Mongodb className="icon mongodb" label="MONGODB" />,
-      <Bootstrap className="icon bootstrap" label="BOOTSTRAP" />,
-      <Illustrator className="icon illustrator" label="ILLUSTRATOR" />,
-      <Indesign className="icon indesign" label="INDESIGN" />,
-      <Agile className="icon agile" label="AGILE" />
-    ];
     return (
       <div className="home-container">
         <SectionOne />
-        <section id="section-two">
-          <div className="navbar-container">
-            <nav className="navbar">
-              <div className="nav-link-container">
-                <a className="nav-link" href="#section-one">
-                  Home
-                  <div className="underline" />
-                </a>
-              </div>
-              <div className="nav-link-container">
-                <a className="nav-link" href="#section-two">
-                  Projects
-                  <div className="underline" />
-                </a>
-              </div>
-              <div className="nav-link-container">
-                <a className="nav-link" href="#section-three">
-                  About
-                  <div className="underline" />
-                </a>
-              </div>
-            </nav>
-            <div className="navbar-shadow" />
-          </div>
-          <div className="skill-divider">
-            <div className="skills-wrapper">
-              <div className="skills-container">
-                <div className="figure-container">
-                  {skills.map((skill, i) => (
-                    <figure className="figure" key={i}>
-                      {skill}
-                      <figcaption className="caption">
-                        {skill.props.label}
-                      </figcaption>
-                    </figure>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <Divider className="section-divider" />
-          </div>
-          <h1 className="section-two-header">PROJECTS</h1>
-          <div className="static-wrapper">
-            {this.images.map((image, i) => (
-              <Static
-                key={i}
-                image={image}
-                name={ProjectData[i].name}
-                deployment={ProjectData[i].deployment}
-                repository={ProjectData[i].repository}
-                technologies={ProjectData[i].technologies}
-              />
-            ))}
-          </div>
-        </section>
+        <SectionTwo />
         <section id="section-three">
           <DividerTwo className="section-divider" />
           <div className="profile-container">
