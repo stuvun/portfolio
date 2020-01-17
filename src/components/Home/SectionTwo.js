@@ -13,10 +13,10 @@ import {
   Css,
   ReactJS,
   Python,
+  Node,
   Postgres,
   Mongodb,
   Bootstrap,
-  Node,
   Agile,
   Illustrator,
   Indesign
@@ -30,10 +30,10 @@ const SectionTwo = () => {
     Css,
     ReactJS,
     Python,
+    Node,
     Postgres,
     Mongodb,
     Bootstrap,
-    Node,
     Agile,
     Illustrator,
     Indesign
