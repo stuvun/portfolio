@@ -301,13 +301,10 @@ h1.section-two-header {
   margin: 30px auto;
   text-decoration: none;
 }
+.resume-pdf,
 .email {
   height: 30px;
-  margin: 0 10px;
-}
-.resume-pdf {
-  height: 30px;
-  margin: 0 10px;
+  margin: 0 10px 0 0;
 }
 .technologies {
   background: rgb(0, 0, 75);
